@@ -1,0 +1,85 @@
+{
+	"FilterHeaders": [
+		{
+			"Header": "",
+			"IncludeInScript": false
+		}
+	],
+	"FilterResources": [
+		{
+			"IsNonResource": true,
+			"type": "text/xml"
+		},
+		{
+			"IsNonResource": true,
+			"type": "application/json"
+		}
+	],
+	"GeneralInfo": {
+		"BrowserVersion": "",
+		"IsWinInetMode": false,
+		"MaxUsedConnections": 0,
+		"RecordedBrowser": "",
+		"RecordingDate": "Feb-16-2021",
+		"RecordingDuration": 0,
+		"RecordingMode": "N/A",
+		"RecordingTimeStamp": 1613495108,
+		"RecordingType": "Browser",
+		"TotalBytesReceived": 9017,
+		"TotalBytesSent": 994,
+		"TotalRequests": 3,
+		"UserAgent": "",
+		"ReadOnly": true
+	},
+	"HostInfo": [
+		{
+			"DomainName": "advantageonlineshopping.com",
+			"Domains": [
+				{
+					"HTTPVersion": "HTTP/1.1",
+					"IP": "",
+					"IncludeInScript": true,
+					"Name": "www.advantageonlineshopping.com",
+					"Port": 80,
+					"Requests": [
+						{
+							"URL": "http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data",
+							"CompressionType": "gzip",
+							"DataType": "application/json",
+							"DownloadTime": 0,
+							"EventId": 0,
+							"HttpStatus": 200,
+							"Size": 505
+						},
+						{
+							"URL": "http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL",
+							"CompressionType": "gzip",
+							"DataType": "application/json",
+							"DownloadTime": 0,
+							"EventId": 0,
+							"HttpStatus": 200,
+							"Size": 6886
+						},
+						{
+							"URL": "http://www.advantageonlineshopping.com/accountservice/ws/accountservice.wsdl",
+							"CompressionType": "",
+							"DataType": "text/xml",
+							"DownloadTime": 0,
+							"EventId": 0,
+							"HttpStatus": 200,
+							"Size": 1626
+						}
+					],
+					"SSLCipher": "None",
+					"SSLVersion": "None"
+				}
+			],
+			"IncludeInScript": true
+		}
+	],
+	"WebSocket": {
+		"IncludeInScript": false,
+		"IsScriptIncludeWebSocket": false
+	},
+	"NumberOfCorrelations": 0
+}

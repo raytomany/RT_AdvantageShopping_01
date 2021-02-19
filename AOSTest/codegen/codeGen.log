@@ -1,0 +1,99 @@
+[17:05:08.38] Info: Running build Release_2021.0.0_1293 on darwin
+[17:05:08.38] Info: DevWeb offline generator started with 'har' mode, 'url' level.
+[17:05:08.38] Info: Generating script from 'AOSproxy.har'.
+[17:05:08.38] Info: Using configuration file: /Users/Store/Downloads/LRDeveloper/devweb/generator_config.yml.
+[17:05:08.39] Info: HAR file loaded, started parsing phase.
+[17:05:08.39] Info: Parsing done, loaded 3 steps from HAR.
+[17:05:08.40] Info: Configured headers to filter: [Host Content-Length Cookie]
+[17:05:08.40] Info: Configured hosts black list: [.*google.* .*bing.* .*geolocation.* .*gstatic.* .*firefox.*]
+[17:05:08.40] Info: Configured extensions to filter: [.ico]
+[17:05:08.42] Info: **********************************************
+[17:05:08.42] Info: WebRequest [Id: 1] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data'
+[17:05:08.44] Info: **********************************************
+[17:05:08.44] Info: WebRequest [Id: 2] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL'
+[17:05:08.46] Info: **********************************************
+[17:05:08.46] Info: WebRequest [Id: 3] POST 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice.wsdl'
+[17:05:08.46] Info: Created 3 steps.
+[17:05:08.50] Info: scenario.yml already exists at '/Users/Store/Downloads/LRDeveloper/AOSTest' and will not be updated.
+[17:05:08.50] Info: rts.yml already exists at '/Users/Store/Downloads/LRDeveloper/AOSTest/rts.yml' and will not be updated.
+[17:05:08.54] Info: DevWeb script generated in folder '/Users/Store/Downloads/LRDeveloper/AOSTest'.
+[17:05:08.55] Info: Save input file as /Users/Store/Downloads/LRDeveloper/AOSTest/codegen/codegen.har
+Info: **********************************************
+[17:00:37.34] Info: WebRequest [Id: 7] GET 'http://www.advantageonlineshopping.com/css/images/logo.png'
+[17:00:37.35] Info: **********************************************
+[17:00:37.36] Info: WebRequest [Id: 8] GET 'http://www.advantageonlineshopping.com/services.properties'
+[17:00:37.37] Info: **********************************************
+[17:00:37.39] Info: WebRequest [Id: 9] GET 'http://www.advantageonlineshopping.com/css/images/closeDark.png'
+[17:00:37.41] Info: **********************************************
+[17:00:37.43] Info: WebRequest [Id: 10] GET 'http://www.advantageonlineshopping.com/css/fonts/roboto_light_macroman/Roboto-Light-webfont.woff'
+[17:00:37.44] Info: **********************************************
+[17:00:37.45] Info: WebRequest [Id: 11] GET 'http://www.advantageonlineshopping.com/css/fonts/roboto_medium_macroman/Roboto-Medium-webfont.woff'
+[17:00:37.47] Info: **********************************************
+[17:00:37.48] Info: WebRequest [Id: 12] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL'
+[17:00:37.49] Info: **********************************************
+[17:00:37.50] Info: WebRequest [Id: 13] POST 'http://www.advantageonlineshopping.com//accountservice/ws/GetAccountConfigurationRequest'
+[17:00:37.51] Info: **********************************************
+[17:00:37.53] Info: WebRequest [Id: 14] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories'
+[17:00:37.54] Info: **********************************************
+[17:00:37.56] Info: WebRequest [Id: 15] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/deals/search'
+[17:00:37.58] Info: **********************************************
+[17:00:37.60] Info: WebRequest [Id: 16] GET 'http://www.advantageonlineshopping.com/app/tempFiles/popularProducts.json'
+[17:00:37.61] Info: **********************************************
+[17:00:37.62] Info: WebRequest [Id: 17] GET 'http://www.advantageonlineshopping.com/app/views/home-page.html'
+[17:00:37.63] Info: **********************************************
+[17:00:37.64] Info: WebRequest [Id: 18] GET 'http://www.advantageonlineshopping.com/css/images/Special-offer.jpg'
+[17:00:37.65] Info: **********************************************
+[17:00:37.67] Info: WebRequest [Id: 19] GET 'http://www.advantageonlineshopping.com/css/images/chat_logo.png'
+[17:00:37.68] Info: **********************************************
+[17:00:37.69] Info: WebRequest [Id: 20] GET 'http://www.advantageonlineshopping.com/css/images/GoUp.png'
+[17:00:37.70] Info: **********************************************
+[17:00:37.71] Info: WebRequest [Id: 21] GET 'http://www.advantageonlineshopping.com/css/images/facebook.png'
+[17:00:37.72] Info: **********************************************
+[17:00:37.73] Info: WebRequest [Id: 22] GET 'http://www.advantageonlineshopping.com/css/images/twitter.png'
+[17:00:37.75] Info: **********************************************
+[17:00:37.77] Info: WebRequest [Id: 23] GET 'http://www.advantageonlineshopping.com/css/images/linkedin.png'
+[17:00:37.78] Info: **********************************************
+[17:00:37.79] Info: WebRequest [Id: 24] GET 'http://www.advantageonlineshopping.com/css/images/arrow_right.png'
+[17:00:37.82] Info: **********************************************
+[17:00:37.82] Info: WebRequest [Id: 25] GET 'http://www.advantageonlineshopping.com/catalog/fetchImage'
+[17:00:37.83] Info: **********************************************
+[17:00:37.84] Info: WebRequest [Id: 26] GET 'http://www.advantageonlineshopping.com/css/images/Banner2.jpg'
+[17:00:37.85] Info: **********************************************
+[17:00:37.86] Info: WebRequest [Id: 27] GET 'http://www.advantageonlineshopping.com/catalog/fetchImage'
+[17:00:37.87] Info: **********************************************
+[17:00:37.88] Info: WebRequest [Id: 28] GET 'http://www.advantageonlineshopping.com/catalog/fetchImage'
+[17:00:37.90] Info: **********************************************
+[17:00:37.90] Info: WebRequest [Id: 29] GET 'http://www.advantageonlineshopping.com/css/images/Banner1.jpg'
+[17:00:37.93] Info: **********************************************
+[17:00:37.94] Info: WebRequest [Id: 30] GET 'http://www.advantageonlineshopping.com/catalog/fetchImage'
+[17:00:37.95] Info: **********************************************
+[17:00:37.96] Info: WebRequest [Id: 31] GET 'http://www.advantageonlineshopping.com/catalog/fetchImage'
+[17:00:37.97] Info: **********************************************
+[17:00:37.99] Info: WebRequest [Id: 32] GET 'http://www.advantageonlineshopping.com/css/images/Banner3.jpg'
+[17:00:38.00] Info: **********************************************
+[17:00:38.01] Info: WebRequest [Id: 33] GET 'http://www.advantageonlineshopping.com/css/images/Popular-item3.jpg'
+[17:00:38.02] Info: **********************************************
+[17:00:38.03] Info: WebRequest [Id: 34] GET 'http://www.advantageonlineshopping.com/css/fonts/roboto_bold_macroman/Roboto-Bold-webfont.woff'
+[17:00:38.04] Info: **********************************************
+[17:00:38.05] Info: WebRequest [Id: 35] GET 'http://www.advantageonlineshopping.com/css/images/Popular-item1.jpg'
+[17:00:38.06] Info: **********************************************
+[17:00:38.08] Info: WebRequest [Id: 36] GET 'http://www.advantageonlineshopping.com/css/images/Popular-item2.jpg'
+[17:00:38.09] Info: **********************************************
+[17:00:38.10] Info: WebRequest [Id: 37] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products'
+[17:00:38.11] Info: **********************************************
+[17:00:38.12] Info: WebRequest [Id: 38] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes'
+[17:00:38.14] Info: **********************************************
+[17:00:38.15] Info: WebRequest [Id: 39] GET 'http://www.advantageonlineshopping.com/app/views/category-page.html'
+[17:00:38.16] Info: **********************************************
+[17:00:38.17] Info: WebRequest [Id: 40] GET 'http://www.advantageonlineshopping.com/css/images/Filter.png'
+[17:00:38.18] Info: **********************************************
+[17:00:38.20] Info: WebRequest [Id: 41] GET 'http://www.advantageonlineshopping.com/catalog/fetchImage'
+[17:00:38.21] Info: **********************************************
+[17:00:38.22] Info: WebRequest [Id: 42] GET 'http://www.advantageonlineshopping.com/catalog/fetchImage'
+[17:00:38.23] Info: **********************************************
+[17:00:38.24] Info: WebRequest [Id: 43] GET 'http://www.advantageonlineshopping.com/catalog/fetchImage'
+[17:00:38.25] Info: Created 43 steps.
+[17:00:38.28] Info: scenario.yml already exists at '/Users/Store/Downloads/LRDeveloper/AOSTest' and will not be updated.
+[17:00:38.28] Info: rts.yml already exists at '/Users/Store/Downloads/LRDeveloper/AOSTest/rts.yml' and will not be updated.
+[17:00:38.31] Info: DevWeb script generated in folder '/Users/Store/Downloads/LRDeveloper/AOSTest'.
+[17:00:38.33] Info: Save input file as /Users/Store/Downloads/LRDeveloper/AOSTest/codegen/codegen.har

@@ -1,0 +1,18 @@
+[17:30:29.75] Info: Running build Release_2021.0.0_1293 on darwin
+[17:30:29.75] Info: DevWeb offline generator started with 'har' mode, 'url' level.
+[17:30:29.75] Info: Generating script from 'AOSproxy.har'.
+[17:30:29.75] Info: Using configuration file: /Users/Store/Downloads/LRDeveloper/devweb/generator_config.yml.
+[17:30:29.76] Info: HAR file loaded, started parsing phase.
+[17:30:29.76] Info: Parsing done, loaded 3 steps from HAR.
+[17:30:29.76] Info: Configured headers to filter: [Host Content-Length Cookie]
+[17:30:29.76] Info: Configured hosts black list: [.*google.* .*bing.* .*geolocation.* .*gstatic.* .*firefox.*]
+[17:30:29.76] Info: Configured extensions to filter: [.ico]
+[17:30:29.77] Info: **********************************************
+[17:30:29.77] Info: WebRequest [Id: 1] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data'
+[17:30:29.79] Info: **********************************************
+[17:30:29.79] Info: WebRequest [Id: 2] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL'
+[17:30:29.80] Info: **********************************************
+[17:30:29.81] Info: WebRequest [Id: 3] POST 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice.wsdl'
+[17:30:29.83] Info: Created 3 steps.
+[17:30:29.86] Info: DevWeb script generated in folder '/Users/Store/Downloads/RT_AdvantageShopping_01/src/com/company/test/resources/AOSTest'.
+[17:30:29.86] Info: Save input file as /Users/Store/Downloads/RT_AdvantageShopping_01/src/com/company/test/resources/AOSTest/codegen/codegen.har

@@ -1,0 +1,42 @@
+[19:44:22.94] Info: Running build Release_2021.0.0_1293 on darwin
+[19:44:22.94] Info: DevWeb offline generator started with 'har' mode, 'url' level.
+[19:44:22.94] Info: Generating script from 'AOSproxy.har'.
+[19:44:22.94] Info: Using configuration file: /Users/Store/Downloads/LRDeveloper/devweb/generator_config.yml.
+[19:44:22.97] Info: HAR file loaded, started parsing phase.
+[19:44:22.97] Info: Parsing done, loaded 13 steps from HAR.
+[19:44:22.97] Info: Configured headers to filter: [Host Content-Length Cookie]
+[19:44:22.97] Info: Configured hosts black list: [.*google.* .*bing.* .*geolocation.* .*gstatic.* .*firefox.*]
+[19:44:22.97] Info: Configured extensions to filter: [.ico]
+[19:44:22.99] Info: **********************************************
+[19:44:22.99] Info: WebRequest [Id: 1] GET 'http://www.advantageonlineshopping.com/services.properties'
+[19:44:23.00] Info: **********************************************
+[19:44:23.00] Info: WebRequest [Id: 2] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data'
+[19:44:23.00] Info: **********************************************
+[19:44:23.00] Info: WebRequest [Id: 3] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL'
+[19:44:23.00] Info: **********************************************
+[19:44:23.00] Info: WebRequest [Id: 4] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/1/products'
+[19:44:23.03] Info: **********************************************
+[19:44:23.03] Info: WebRequest [Id: 5] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/2/products'
+[19:44:23.05] Info: **********************************************
+[19:44:23.06] Info: WebRequest [Id: 6] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products'
+[19:44:23.08] Info: **********************************************
+[19:44:23.09] Info: WebRequest [Id: 7] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/4/products'
+[19:44:23.10] Info: **********************************************
+[19:44:23.12] Info: WebRequest [Id: 8] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/5/products'
+[19:44:23.14] Info: **********************************************
+[19:44:23.16] Info: WebRequest [Id: 9] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes'
+[19:44:23.18] Info: **********************************************
+[19:44:23.20] Info: WebRequest [Id: 10] GET 'http://www.advantageonlineshopping.com/catalog/fetchImage'
+[19:44:23.22] Info: **********************************************
+[19:44:23.24] Info: WebRequest [Id: 11] GET 'http://www.advantageonlineshopping.com/catalog/fetchImage'
+[19:44:23.25] Info: **********************************************
+[19:44:23.27] Info: WebRequest [Id: 12] GET 'http://www.advantageonlineshopping.com/catalog/fetchImage'
+[19:44:23.28] Info: **********************************************
+[19:44:23.30] Info: WebRequest [Id: 13] POST 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice/accountservice.wsdl'
+[19:44:23.32] Info: Created 13 steps.
+[19:44:23.35] Info: scenario.yml already exists at '/Users/Store/Downloads/RT_AdvantageShopping_01/test/resources/AOSTest' and will not be updated.
+[19:44:23.35] Info: rts.yml already exists at '/Users/Store/Downloads/RT_AdvantageShopping_01/test/resources/AOSTest/rts.yml' and will not be updated.
+[19:44:23.39] Info: DevWeb script generated in folder '/Users/Store/Downloads/RT_AdvantageShopping_01/test/resources/AOSTest'.
+[19:44:23.39] Info: Save input file as /Users/Store/Downloads/RT_AdvantageShopping_01/test/resources/AOSTest/codegen/codegen.har
+ntageShopping_01/test/resources/AOSTest'.
+[18:38:28.38] Info: Save input file as /Users/Store/Downloads/RT_AdvantageShopping_01/test/resources/AOSTest/codegen/codegen.har

@@ -1,0 +1,5065 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "3.1-SNAPSHOT",
+        "title": "Advantage - accountservice.war REST API"
+    },
+    "host": "www.advantageonlineshopping.com",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "combined-service-controller",
+            "description": "Combined Services Controller"
+        }
+    ],
+    "paths": {
+        "/order/api/v1/carts/{userId}": {
+            "get": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Get user shopping cart",
+                "operationId": "getUserCartUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ShoppingCartResponseDto"
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Replace user shopping cart",
+                "operationId": "replaceUserCartUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "in": "body",
+                        "name": "shoopingCartProducts",
+                        "description": "shoopingCartProducts",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ShoppingCartDto"
+                            }
+                        }
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ShoppingCartResponse"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Clear user shopping cart",
+                "operationId": "clearUserCartUsingDELETE",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ShoppingCartResponseDto"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/order/api/v1/carts/{userId}/orders/{orderId}": {
+            "post": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Add old order to shopping cart",
+                "operationId": "addOldOrderToCartUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "name": "orderId",
+                        "in": "path",
+                        "description": "orderId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ShoppingCartResponse"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/order/api/v1/carts/{userId}/product/{productId}/color/{color}": {
+            "post": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Add product to shopping cart",
+                "operationId": "addProductToCartUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "name": "color",
+                        "in": "path",
+                        "description": "color",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "hasWarranty",
+                        "in": "query",
+                        "description": "hasWarranty",
+                        "required": false,
+                        "type": "boolean",
+                        "default": false
+                    },
+                    {
+                        "name": "productId",
+                        "in": "path",
+                        "description": "productId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    {
+                        "name": "quantity",
+                        "in": "query",
+                        "description": "quantity",
+                        "required": false,
+                        "type": "integer",
+                        "default": 1,
+                        "format": "int32"
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ShoppingCartResponseDto"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Update Cart-Product quantity and/or color",
+                "operationId": "updateProductInCartUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "name": "color",
+                        "in": "path",
+                        "description": "color",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "new_color",
+                        "in": "query",
+                        "description": "new_color",
+                        "required": false,
+                        "type": "string",
+                        "default": "-1"
+                    },
+                    {
+                        "name": "productId",
+                        "in": "path",
+                        "description": "productId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    {
+                        "name": "quantity",
+                        "in": "query",
+                        "description": "quantity",
+                        "required": false,
+                        "type": "integer",
+                        "default": -1,
+                        "format": "int32"
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ShoppingCartResponseDto"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Remove a product from user shopping cart",
+                "operationId": "removeProductFromUserCartUsingDELETE",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "name": "color",
+                        "in": "path",
+                        "description": "color",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "productId",
+                        "in": "path",
+                        "description": "productId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ShoppingCartResponseDto"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/order/api/v1/carts/{userId}/quantity": {
+            "put": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Verify and update products quantities in user cart",
+                "operationId": "verifyProductsQuantitiesInUserCartUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "in": "body",
+                        "name": "shoopingCartProducts",
+                        "description": "shoopingCartProducts",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ShoppingCartDto"
+                            }
+                        }
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ShoppingCartResponseDto"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/order/api/v1/healthcheck": {
+            "get": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Get application status",
+                "operationId": "getHealthCheckUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/order/api/v1/order/Restore_db_factory_settings": {
+            "get": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Restore Database factory settings",
+                "operationId": "dbRestoreFactorySettingsUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/RestoredefaultDBsettingsResponse"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/order/api/v1/orders/fields": {
+            "get": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Get order fields",
+                "operationId": "orderFieldsUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/HistoryOrderHeaderDto"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/order/api/v1/orders/history": {
+            "get": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Get orders history by user-id and/or order-id",
+                "operationId": "getOrdersHistoryUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "order_id",
+                        "in": "query",
+                        "description": "order_id",
+                        "required": false,
+                        "type": "integer",
+                        "default": 0,
+                        "format": "int64"
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "user_id",
+                        "required": false,
+                        "type": "integer",
+                        "default": 0,
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/HistoryOrderResponseDto"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/order/api/v1/orders/history/lines/users/{userId}": {
+            "get": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Get orders history of orders-lines for userID",
+                "operationId": "getHistoryOrdersLinesUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/HistoryOrderLinesDto"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/order/api/v1/orders/history/users/{userId}": {
+            "get": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Clear user shopping cart",
+                "operationId": "removeAllOrdersForUserUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": true,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/OrderHistoryRemoveDto"
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/order/api/v1/orders/history/users/{userId}/{orderId}": {
+            "delete": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Clear user shopping cart",
+                "operationId": "removeOrderUsingDELETE",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "name": "orderId",
+                        "in": "path",
+                        "description": "orderId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/HistoryOrderLinesDto"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/order/api/v1/orders/users/{userId}": {
+            "post": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Purchase new order",
+                "operationId": "doPurchaseUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "in": "body",
+                        "name": "purchaseRequest",
+                        "description": "purchaseRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/OrderPurchaseRequest"
+                        }
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/OrderPurchaseResponse"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "409": {
+                        "description": "Conflict",
+                        "schema": {
+                            "$ref": "#/definitions/OrderPurchaseResponse"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/order/api/v1/shippingcost": {
+            "post": {
+                "tags": [
+                    "order-controller"
+                ],
+                "summary": "Order shipping cost",
+                "operationId": "getShippingCostFromShipExUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "costRequest",
+                        "description": "costRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ShippingCostRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ShippingCostResponse"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    ,
+
+        "/catalog/api/v1/DemoAppConfig/Export_To_Excel": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Export Demo App Config To Excel file",
+                "operationId": "exportDemoAppConfigToExcelUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/DemoAppConfig/Restore_Factory_Settings": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Restore parameters default values",
+                "operationId": "restoreFactorySettingsUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/DemoAppConfigStatusResponse"
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/DemoAppConfig/parameters/by_tool/{tools_names}": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Get parameters by tools (separate tools by semi-colon (;))",
+                "operationId": "getDemoAppConfigParametersByToolsUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "tools_names",
+                        "in": "path",
+                        "description": "tools_names",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/DemoAppConfigResponse"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/DemoAppConfig/parameters/{parameter_name}": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Get configuration parameter by name",
+                "operationId": "getDemoAppConfigParameterByNameUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "parameter_name",
+                        "in": "path",
+                        "description": "parameter_name",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/DemoAppConfigParameter"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/DemoAppConfig/update/parameter/{name}/value": {
+            "put": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Update DemoAppConfig parameter value",
+                "operationId": "updateDemoAppConfigParameterUsingPUT_1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "param",
+                        "in": "query",
+                        "description": "param",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/DemoAppConfigStatusResponse"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/DemoAppConfig/update/parameter/{name}/value/{new_value}": {
+            "put": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Update DemoAppConfig parameter value",
+                "operationId": "updateDemoAppConfigParameterUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "new_value",
+                        "in": "path",
+                        "description": "new_value",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/DemoAppConfigStatusResponse"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/DemoAppConfig/update/parameters": {
+            "put": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Update DemoAppConfig all parameters values",
+                "operationId": "updateDemoAppConfigParametersUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "parameters",
+                        "description": "parameters",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/DemoAppConfigParametersDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/DemoAppConfigStatusResponse"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/MostPopularComments": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "getAllOrders",
+                "operationId": "getAllOrdersUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/MostPopularCommentsResponse"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/attributes/colors_pallet": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Get all colors codes",
+                "operationId": "getColorPalletUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/catalog/LastUpdate/create/{last_update_name}": {
+            "post": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "FOR DEV: Create new Last-Update and set its Timestamp (0 = Now",
+                "operationId": "createLastUpdateUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "last_update_name",
+                        "in": "path",
+                        "description": "last_update_name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "timestamp",
+                        "in": "query",
+                        "description": "timestamp",
+                        "required": false,
+                        "type": "integer",
+                        "default": 0,
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/LastUpdate"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/catalog/LastUpdate/timestamp": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Convert Timestamp (0 = Get Current Timestamp)",
+                "operationId": "getTimestampUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "date_format",
+                        "in": "query",
+                        "description": "date_format",
+                        "required": false,
+                        "type": "string",
+                        "default": "0"
+                    },
+                    {
+                        "name": "timestamp",
+                        "in": "query",
+                        "description": "timestamp",
+                        "required": false,
+                        "type": "string",
+                        "default": "0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/catalog/LastUpdate/update/last_update_id/{last_update_id}/last_update_name/{last_update_name}": {
+            "put": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "FOR DEV: Update Timestamp of an existing Last-Update",
+                "operationId": "updateLastUpdateUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "date_format",
+                        "in": "query",
+                        "description": "date_format",
+                        "required": false,
+                        "type": "string",
+                        "default": "0"
+                    },
+                    {
+                        "name": "last_update_id",
+                        "in": "path",
+                        "description": "last_update_id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    {
+                        "name": "last_update_name",
+                        "in": "path",
+                        "description": "last_update_name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "timestamp",
+                        "in": "query",
+                        "description": "timestamp",
+                        "required": false,
+                        "type": "string",
+                        "default": "0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/LastUpdate"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/catalog/LastUpdate/{what_to_get}": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Get Last-Update by ID, By Name or ALL",
+                "operationId": "getLastUpdatesUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "what_to_get",
+                        "in": "path",
+                        "description": "what_to_get",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/LastUpdate"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/catalog/Restore_db_factory_settings": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Restore Database factory settings",
+                "operationId": "dbRestoreFactorySettingsUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/CatalogResponse"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/categories": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Get all categories with product's short details",
+                "operationId": "getAllCategoriesUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Category"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/categories/all_data": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Get all categories with product's full details",
+                "operationId": "getCategoryDtoDataUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/CategoriesDto"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/categories/attributes": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Get all categories attributes",
+                "operationId": "getAllCategoriesAttributesUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/CategoryAttributeFilterResponse"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/categories/{category_id}/products": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Get deal and products full details for this category",
+                "operationId": "getCategoryDataUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "category_id",
+                        "in": "path",
+                        "description": "category_id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/CategoryDto"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/deals": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Get all deals",
+                "operationId": "getAllDealsUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Deal"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/deals/search": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Get deal of the day",
+                "operationId": "getDealOfTheDayUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "dealOfTheDay",
+                        "in": "query",
+                        "description": "dealOfTheDay",
+                        "required": false,
+                        "type": "boolean",
+                        "default": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Deal"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/facebookLogin": {
+            "post": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "AppPulse API that mimic a failed facebook login",
+                "operationId": "facebookLoginUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/images": {
+            "post": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Upload image",
+                "operationId": "imageUploadUsingPOST",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "file",
+                        "required": true,
+                        "type": "file"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ImageUrlResponseDto"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/product/image/{userId}/{source}": {
+            "post": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Upload a new image to a product",
+                "operationId": "addImageToProductUsingPOST_1",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "file",
+                        "required": true,
+                        "type": "file"
+                    },
+                    {
+                        "name": "product_id",
+                        "in": "query",
+                        "description": "product_id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    {
+                        "name": "source",
+                        "in": "path",
+                        "description": "source",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductResponseDto"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/product/image/{userId}/{source}/{color}": {
+            "post": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Upload a new image to a product",
+                "operationId": "addImageToProductUsingPOST",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "name": "color",
+                        "in": "path",
+                        "description": "color",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "file",
+                        "required": true,
+                        "type": "file"
+                    },
+                    {
+                        "name": "product_id",
+                        "in": "query",
+                        "description": "product_id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    {
+                        "name": "source",
+                        "in": "path",
+                        "description": "source",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductResponseDto"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/product/images/{userId}/{source}": {
+            "post": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Upload a new image to a product",
+                "operationId": "addMultipleImagesToProductUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "file",
+                        "required": true,
+                        "type": "array",
+                        "items": {
+                            "type": "file"
+                        },
+                        "collectionFormat": "multi"
+                    },
+                    {
+                        "name": "new_colors_quantity",
+                        "in": "query",
+                        "description": "new_colors_quantity",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "product_id",
+                        "in": "query",
+                        "description": "product_id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    {
+                        "name": "source",
+                        "in": "path",
+                        "description": "source",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductUploadImagesResponseDto"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/products": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Get all products info",
+                "operationId": "getAllProductsUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductCollectionDto"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "post": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Create new product",
+                "operationId": "createProductUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "in": "body",
+                        "name": "product",
+                        "description": "product",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ProductDto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductResponseDto"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/products/id/{product_id}": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Return requested HTTP status code for NV",
+                "operationId": "returnHttpStatusForCodeNetworkVirtualizationUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "product_id",
+                        "in": "path",
+                        "description": "product_id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/products/images": {
+            "post": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Create product with image",
+                "operationId": "createProductWithImageUsingPOST",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "file",
+                        "required": true,
+                        "type": "file"
+                    },
+                    {
+                        "name": "product",
+                        "in": "query",
+                        "description": "product",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductResponseDto"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/products/search": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Search product by Name",
+                "operationId": "searchProductByNameUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "quantityPerEachCategory",
+                        "in": "query",
+                        "description": "quantityPerEachCategory",
+                        "required": false,
+                        "type": "integer",
+                        "default": -1,
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/CategoryDto"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/products/to_speakers": {
+            "put": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Change Category of product id=13 to Speakers",
+                "operationId": "updateProductCategoryToSpeakersUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductResponseDto"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/products/{product_id}": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Get product info",
+                "operationId": "getProductByIdUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "product_id",
+                        "in": "path",
+                        "description": "product_id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductDto"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Update product details",
+                "operationId": "updateProductUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "in": "body",
+                        "name": "product",
+                        "description": "product",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ProductDto"
+                        }
+                    },
+                    {
+                        "name": "product_id",
+                        "in": "path",
+                        "description": "product_id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductResponseDto"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Delete product from catalog",
+                "operationId": "deleteProductUsingDELETE",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token",
+                        "required": false,
+                        "type": "string",
+                        "default": "Bearer "
+                    },
+                    {
+                        "name": "product_id",
+                        "in": "path",
+                        "description": "product_id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ProductResponseDto"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Authorization token required",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    },
+                    "403": {
+                        "description": "Wrong authorization token",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorResponseDto"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/products/{product_id}/color/{color_code}": {
+            "get": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Get color-attribute by product-id and color-code",
+                "operationId": "getColorAttributeByProductIdAndColorCodeUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "color_code",
+                        "in": "path",
+                        "description": "color_code",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "product_id",
+                        "in": "path",
+                        "description": "product_id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ColorAttributeDto"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/catalog/api/v1/support/contact_us/email": {
+            "post": {
+                "tags": [
+                    "catalog-controller"
+                ],
+                "summary": "Contact support by email",
+                "operationId": "supportSendMailUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "contactUsRequest",
+                        "description": "contactUsRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ContactUsMailRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ContactUsResponse"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/accountrest/accountservice/api/v1/change-password": {
+            "post": {
+                "tags": [
+                    "account-service-controller"
+                ],
+                "summary": "Change user password, admins can change everyone, users can change their own",
+                "operationId": "changePasswordUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token, Use the returned token value from /login request.",
+                        "required": true,
+                        "type": "string",
+                        "default": "Bearer ",
+                        "x-example": "Bearer xxxxxxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "in": "body",
+                        "name": "changePasswordRequest",
+                        "description": "changePasswordRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ChangePasswordRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful deactivation",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLogoutResponse"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Wrong user name or password",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLogoutResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLogoutResponse"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/accountrest/accountservice/api/v1/deactivate": {
+            "post": {
+                "tags": [
+                    "account-service-controller"
+                ],
+                "summary": "deactivate a user",
+                "operationId": "deactivateAccountUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token, Use the returned token value from /login request.",
+                        "required": true,
+                        "type": "string",
+                        "default": "Bearer ",
+                        "x-example": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cuYWR2YW50YWdlb25saW5lc2hvcHBpbmcuY29tIiwidXNlcklkIjoxNjA0Njg2MTUsInN1YiI6ImFkbWluIiwicm9sZSI6IkFETUlOIn0.f7QRYrfpyvxKXDRhWAdocBnuldtQtj-rklmjKn1V80E"
+                    },
+                    {
+                        "in": "body",
+                        "name": "deleteRequest",
+                        "description": "deleteRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/AccountDeleteRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful deactivation",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLogoutResponse"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Wrong user name or password",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLogoutResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLogoutResponse"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/accountrest/accountservice/api/v1/delete": {
+            "delete": {
+                "tags": [
+                    "account-service-controller"
+                ],
+                "summary": "Permanent delete a user",
+                "operationId": "deleteUserUsingDELETE",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "JSON Web Token, Use the returned token value from /login request.",
+                        "required": true,
+                        "type": "string",
+                        "default": "Bearer ",
+                        "x-example": "Bearer xxxxxxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "in": "body",
+                        "name": "deleteRequest",
+                        "description": "deleteRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/AccountPermanentDeleteRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful deactivation",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLogoutResponse"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Wrong user name or password",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLogoutResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLogoutResponse"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/accountrest/accountservice/api/v1/health-check": {
+            "get": {
+                "tags": [
+                    "account-service-controller"
+                ],
+                "summary": "Get detailed information about the health of the service",
+                "operationId": "getHealthCheckUsingGET",
+                "produces": [
+                    "*/*"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/accountrest/accountservice/api/v1/login": {
+            "post": {
+                "tags": [
+                    "account-service-controller"
+                ],
+                "summary": "Login to AOS",
+                "operationId": "doLoginUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "loginRequest",
+                        "description": "loginRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/AccountLoginRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Login successful",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLoginResponse"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Wrong user name or password",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLoginResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLoginResponse"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/accountrest/accountservice/api/v1/logout": {
+            "post": {
+                "tags": [
+                    "account-service-controller"
+                ],
+                "summary": "Logout from AOS",
+                "operationId": "doLogoutUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "logoutRequest",
+                        "description": "logoutRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/AccountLogoutRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Logout successful",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLogoutResponse"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Wrong user name or password",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLogoutResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLogoutResponse"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/accountrest/accountservice/api/v1/register": {
+            "post": {
+                "tags": [
+                    "account-service-controller"
+                ],
+                "summary": "Create a new User account",
+                "operationId": "registerUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "accountCreateRequest",
+                        "description": "accountCreateRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/AccountCreateRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Login successful",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLoginResponse"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Wrong user name or password",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLoginResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/AccountLoginResponse"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    },
+    "definitions": {
+        "CartProduct": {
+            "type": "object",
+            "properties": {
+                "color": {
+                    "$ref": "#/definitions/ProductColor"
+                },
+                "exists": {
+                    "type": "boolean"
+                },
+                "hasWarranty": {
+                    "type": "boolean"
+                },
+                "imageUrl": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "productId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "productName": {
+                    "type": "string"
+                },
+                "quantity": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "title": "CartProduct"
+        },
+        "ErrorResponseDto": {
+            "type": "object",
+            "properties": {
+                "reason": {
+                    "type": "string"
+                },
+                "success": {
+                    "type": "boolean"
+                }
+            },
+            "title": "ErrorResponseDto"
+        },
+        "HistoryOrderAccountDto": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "loginName": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "userId": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            },
+            "title": "HistoryOrderAccountDto"
+        },
+        "HistoryOrderHeaderDto": {
+            "type": "object",
+            "properties": {
+                "customer": {
+                    "$ref": "#/definitions/HistoryOrderAccountDto"
+                },
+                "orderNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "orderShipingCost": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "orderTimestamp": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "orderTotalSum": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "paymentMethod": {
+                    "type": "string"
+                },
+                "products": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/HistoryOrderProductDto"
+                    }
+                },
+                "shippingAddress": {
+                    "type": "string"
+                },
+                "shippingTrackingNumber": {
+                    "type": "number",
+                    "format": "double"
+                }
+            },
+            "title": "HistoryOrderHeaderDto"
+        },
+        "HistoryOrderLineDto": {
+            "type": "object",
+            "properties": {
+                "OrderDate": {
+                    "type": "string"
+                },
+                "OrderNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "PricePerUnit": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "ProductColorCode": {
+                    "type": "string"
+                },
+                "ProductColorName": {
+                    "type": "string"
+                },
+                "ProductID": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "ProductImageUrl": {
+                    "type": "string"
+                },
+                "ProductName": {
+                    "type": "string"
+                },
+                "Quantity": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "UserId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "orderTime": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            },
+            "title": "HistoryOrderLineDto"
+        },
+        "HistoryOrderLinesDto": {
+            "type": "object",
+            "properties": {
+                "OrderDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "OrderLines": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/HistoryOrderLineDto"
+                    }
+                },
+                "OrderNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "OrderTime": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TotalOrderPrice": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "UserId": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            },
+            "title": "HistoryOrderLinesDto"
+        },
+        "HistoryOrderProductDto": {
+            "type": "object",
+            "properties": {
+                "orderNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "pricePerItem": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "productColor": {
+                    "type": "string"
+                },
+                "productId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "productName": {
+                    "type": "string"
+                },
+                "productQuantity": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "title": "HistoryOrderProductDto"
+        },
+        "HistoryOrderResponseDto": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string"
+                },
+                "ordersHistory": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/HistoryOrderHeaderDto"
+                    }
+                }
+            },
+            "title": "HistoryOrderResponseDto"
+        },
+        "OrderHistoryRemoveDto": {
+            "type": "object",
+            "properties": {
+                "isSuccess": {
+                    "type": "boolean"
+                },
+                "success": {
+                    "type": "boolean"
+                },
+                "successfulOrderHeaderDelete": {
+                    "type": "boolean"
+                },
+                "successfulOrderLineDelete": {
+                    "type": "boolean"
+                }
+            },
+            "title": "OrderHistoryRemoveDto"
+        },
+        "OrderPaymentInformation": {
+            "type": "object",
+            "properties": {
+                "Transaction_AccountNumber": {
+                    "type": "string"
+                },
+                "Transaction_Currency": {
+                    "type": "string"
+                },
+                "Transaction_CustomerPhone": {
+                    "type": "string"
+                },
+                "Transaction_MasterCredit_CVVNumber": {
+                    "type": "string"
+                },
+                "Transaction_MasterCredit_CardNumber": {
+                    "type": "string"
+                },
+                "Transaction_MasterCredit_CustomerName": {
+                    "type": "string"
+                },
+                "Transaction_MasterCredit_ExpirationDate": {
+                    "type": "string"
+                },
+                "Transaction_PaymentMethod": {
+                    "type": "string"
+                },
+                "Transaction_ReferenceNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Transaction_SafePay_Password": {
+                    "type": "string"
+                },
+                "Transaction_SafePay_UserName": {
+                    "type": "string"
+                },
+                "Transaction_TransactionDate": {
+                    "type": "string"
+                },
+                "Transaction_Type": {
+                    "type": "string"
+                }
+            },
+            "title": "OrderPaymentInformation"
+        },
+        "OrderPurchaseRequest": {
+            "type": "object",
+            "properties": {
+                "orderPaymentInformation": {
+                    "$ref": "#/definitions/OrderPaymentInformation"
+                },
+                "orderShippingInformation": {
+                    "$ref": "#/definitions/OrderShippingInformation"
+                },
+                "purchasedProducts": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ShoppingCartDto"
+                    }
+                }
+            },
+            "title": "OrderPurchaseRequest"
+        },
+        "OrderPurchaseResponse": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "hasWarranty": {
+                    "type": "boolean"
+                },
+                "orderNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "paymentConfirmationNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "reason": {
+                    "type": "string"
+                },
+                "success": {
+                    "type": "boolean"
+                },
+                "trackingNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "warrantyNumber": {
+                    "type": "string"
+                }
+            },
+            "title": "OrderPurchaseResponse"
+        },
+        "OrderShippingInformation": {
+            "type": "object",
+            "properties": {
+                "Shipping_Address_Address": {
+                    "type": "string"
+                },
+                "Shipping_Address_City": {
+                    "type": "string"
+                },
+                "Shipping_Address_CountryCode": {
+                    "type": "string"
+                },
+                "Shipping_Address_CustomerName": {
+                    "type": "string"
+                },
+                "Shipping_Address_CustomerPhone": {
+                    "type": "string"
+                },
+                "Shipping_Address_PostalCode": {
+                    "type": "string"
+                },
+                "Shipping_Address_State": {
+                    "type": "string"
+                },
+                "Shipping_Cost": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "Shipping_NumberOfProducts": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Shipping_TrackingNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            },
+            "title": "OrderShippingInformation"
+        },
+        "ProductColor": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "inStock": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "title": "ProductColor"
+        },
+        "RestoredefaultDBsettingsResponse": {
+            "type": "object",
+            "properties": {
+                "details": {
+                    "type": "string"
+                },
+                "success": {
+                    "type": "boolean"
+                }
+            },
+            "title": "RestoredefaultDBsettingsResponse"
+        },
+        "SEAddress": {
+            "type": "object",
+            "properties": {
+                "addressLine1": {
+                    "type": "string",
+                    "xml": {
+                        "name": "AddressLine1",
+                        "namespace": "https://www.AdvantageOnlineShopping.com/ShipEx/",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "addressLine2": {
+                    "type": "string",
+                    "xml": {
+                        "name": "AddressLine2",
+                        "namespace": "https://www.AdvantageOnlineShopping.com/ShipEx/",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "city": {
+                    "type": "string",
+                    "xml": {
+                        "name": "City",
+                        "namespace": "https://www.AdvantageOnlineShopping.com/ShipEx/",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "country": {
+                    "type": "string",
+                    "xml": {
+                        "name": "Country",
+                        "namespace": "https://www.AdvantageOnlineShopping.com/ShipEx/",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "postalCode": {
+                    "type": "string",
+                    "xml": {
+                        "name": "PostalCode",
+                        "namespace": "https://www.AdvantageOnlineShopping.com/ShipEx/",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "state": {
+                    "type": "string",
+                    "xml": {
+                        "name": "State",
+                        "namespace": "https://www.AdvantageOnlineShopping.com/ShipEx/",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                }
+            },
+            "title": "SEAddress",
+            "xml": {
+                "name": "SEAddress",
+                "namespace": "https://www.AdvantageOnlineShopping.com/ShipEx/",
+                "attribute": false,
+                "wrapped": false
+            }
+        },
+        "ShippingCostRequest": {
+            "type": "object",
+            "properties": {
+                "seaddress": {
+                    "$ref": "#/definitions/SEAddress"
+                },
+                "secustomerName": {
+                    "type": "string"
+                },
+                "secustomerPhone": {
+                    "type": "string"
+                },
+                "senumberOfProducts": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "setransactionType": {
+                    "type": "string",
+                    "enum": [
+                        "SHIPPING_COST"
+                    ]
+                }
+            },
+            "title": "ShippingCostRequest",
+            "xml": {
+                "name": "ShippingCostRequest",
+                "namespace": "https://www.AdvantageOnlineShopping.com/ShipEx/",
+                "attribute": false,
+                "wrapped": false
+            }
+        },
+        "ShippingCostResponse": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "type": "string",
+                    "xml": {
+                        "name": "Amount",
+                        "namespace": "https://www.AdvantageOnlineShopping.com/ShipEx/",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "code": {
+                    "type": "string",
+                    "xml": {
+                        "name": "Code",
+                        "namespace": "https://www.AdvantageOnlineShopping.com/ShipEx/",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "currency": {
+                    "type": "string",
+                    "xml": {
+                        "name": "Currency",
+                        "namespace": "https://www.AdvantageOnlineShopping.com/ShipEx/",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "reason": {
+                    "type": "string",
+                    "xml": {
+                        "name": "Reason",
+                        "namespace": "https://www.AdvantageOnlineShopping.com/ShipEx/",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "setransactionType": {
+                    "type": "string",
+                    "enum": [
+                        "SHIPPING_COST"
+                    ]
+                },
+                "transactionDate": {
+                    "type": "string",
+                    "xml": {
+                        "name": "TransactionDate",
+                        "namespace": "https://www.AdvantageOnlineShopping.com/ShipEx/",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                }
+            },
+            "title": "ShippingCostResponse",
+            "xml": {
+                "name": "ShippingCostResponse",
+                "namespace": "https://www.AdvantageOnlineShopping.com/ShipEx/",
+                "attribute": false,
+                "wrapped": false
+            }
+        },
+        "ShoppingCartDto": {
+            "type": "object",
+            "properties": {
+                "hasWarranty": {
+                    "type": "boolean"
+                },
+                "hexColor": {
+                    "type": "string"
+                },
+                "productId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "quantity": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "title": "ShoppingCartDto"
+        },
+        "ShoppingCartResponse": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "reason": {
+                    "type": "string"
+                },
+                "success": {
+                    "type": "boolean"
+                }
+            },
+            "title": "ShoppingCartResponse"
+        },
+        "ShoppingCartResponseDto": {
+            "type": "object",
+            "properties": {
+                "exceptionText": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "productsInCart": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/CartProduct"
+                    }
+                },
+                "sessionId": {
+                    "type": "string"
+                },
+                "userId": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            },
+            "title": "ShoppingCartResponseDto"
+        }
+    ,
+        "AttributeDto": {
+            "type": "object",
+            "properties": {
+                "attributeName": {
+                    "type": "string"
+                },
+                "attributeValues": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "title": "AttributeDto"
+        },
+        "AttributeItem": {
+            "type": "object",
+            "properties": {
+                "attributeName": {
+                    "type": "string"
+                },
+                "attributeValue": {
+                    "type": "string"
+                }
+            },
+            "title": "AttributeItem"
+        },
+        "CatalogResponse": {
+            "type": "object",
+            "properties": {
+                "reason": {
+                    "type": "string"
+                },
+                "returnCode": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "success": {
+                    "type": "boolean"
+                }
+            },
+            "title": "CatalogResponse"
+        },
+        "CategoriesDto": {
+            "type": "object",
+            "properties": {
+                "attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AttributeDto"
+                    }
+                },
+                "categoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "categoryImageId": {
+                    "type": "string"
+                },
+                "categoryName": {
+                    "type": "string"
+                },
+                "colors": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "products": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/CategoryProductDto"
+                    }
+                },
+                "promotedProduct": {
+                    "$ref": "#/definitions/PromotedProductDto"
+                }
+            },
+            "title": "CategoriesDto"
+        },
+        "Category": {
+            "type": "object",
+            "properties": {
+                "categoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "categoryName": {
+                    "type": "string"
+                },
+                "managedImageId": {
+                    "type": "string"
+                },
+                "products": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Product"
+                    }
+                }
+            },
+            "title": "Category"
+        },
+        "CategoryAttributeFilterResponse": {
+            "type": "object",
+            "properties": {
+                "categoriesAttributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/CategoryAttributeShowInFilter"
+                    }
+                }
+            },
+            "title": "CategoryAttributeFilterResponse"
+        },
+        "CategoryAttributeShowInFilter": {
+            "type": "object",
+            "properties": {
+                "attributeId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "attributeName": {
+                    "type": "string"
+                },
+                "categoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "categoryName": {
+                    "type": "string"
+                },
+                "showInFilter": {
+                    "type": "boolean"
+                }
+            },
+            "title": "CategoryAttributeShowInFilter"
+        },
+        "CategoryDto": {
+            "type": "object",
+            "properties": {
+                "attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AttributeDto"
+                    }
+                },
+                "categoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "categoryImageId": {
+                    "type": "string"
+                },
+                "categoryName": {
+                    "type": "string"
+                },
+                "colors": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "products": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ProductDto"
+                    }
+                },
+                "promotedProduct": {
+                    "$ref": "#/definitions/PromotedProductDto"
+                }
+            },
+            "title": "CategoryDto"
+        },
+        "CategoryProductAttributeItem": {
+            "type": "object",
+            "properties": {
+                "attributeName": {
+                    "type": "string"
+                },
+                "attributeValue": {
+                    "type": "string"
+                },
+                "showInFilter": {
+                    "type": "boolean"
+                }
+            },
+            "title": "CategoryProductAttributeItem"
+        },
+        "CategoryProductDto": {
+            "type": "object",
+            "properties": {
+                "attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/CategoryProductAttributeItem"
+                    }
+                },
+                "categoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "colors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ColorAttributeDto"
+                    }
+                },
+                "description": {
+                    "type": "string"
+                },
+                "imageUrl": {
+                    "type": "string"
+                },
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "price": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "productId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "productName": {
+                    "type": "string"
+                },
+                "productStatus": {
+                    "type": "string"
+                }
+            },
+            "title": "CategoryProductDto"
+        },
+        "ColorAttributeDto": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "inStock": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "title": "ColorAttributeDto"
+        },
+        "ContactUsMailRequest": {
+            "type": "object",
+            "properties": {
+                "categoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "productId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "text": {
+                    "type": "string"
+                }
+            },
+            "title": "ContactUsMailRequest"
+        },
+        "ContactUsResponse": {
+            "type": "object",
+            "properties": {
+                "reason": {
+                    "type": "string"
+                },
+                "returnCode": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "success": {
+                    "type": "boolean"
+                }
+            },
+            "title": "ContactUsResponse"
+        },
+        "Deal": {
+            "type": "object",
+            "properties": {
+                "dateFrom": {
+                    "type": "string"
+                },
+                "dateTo": {
+                    "type": "string"
+                },
+                "dealType": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "discount": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "managedImageId": {
+                    "type": "string"
+                },
+                "product": {
+                    "$ref": "#/definitions/Product"
+                },
+                "promotionHeader": {
+                    "type": "string"
+                },
+                "promotionSubHeader": {
+                    "type": "string"
+                },
+                "staringPrice": {
+                    "type": "string"
+                }
+            },
+            "title": "Deal"
+        },
+        "DemoAppConfigParameter": {
+            "type": "object",
+            "properties": {
+                "attributeTools": {
+                    "type": "string"
+                },
+                "datatype": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "locationInAdminTool": {
+                    "type": "string"
+                },
+                "locationInAdvantage": {
+                    "type": "string"
+                },
+                "parameterName": {
+                    "type": "string"
+                },
+                "parameterValue": {
+                    "type": "string"
+                }
+            },
+            "title": "DemoAppConfigParameter"
+        },
+        "DemoAppConfigParameterDto": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "newValue": {
+                    "type": "string"
+                }
+            },
+            "title": "DemoAppConfigParameterDto"
+        },
+        "DemoAppConfigParametersDto": {
+            "type": "object",
+            "properties": {
+                "parameters": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DemoAppConfigParameterDto"
+                    }
+                }
+            },
+            "title": "DemoAppConfigParametersDto"
+        },
+        "DemoAppConfigResponse": {
+            "type": "object",
+            "properties": {
+                "parameters": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DemoAppConfigParameter"
+                    }
+                }
+            },
+            "title": "DemoAppConfigResponse"
+        },
+        "DemoAppConfigStatusResponse": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "reason": {
+                    "type": "string"
+                },
+                "success": {
+                    "type": "boolean"
+                }
+            },
+            "title": "DemoAppConfigStatusResponse"
+        },
+        "ErrorResponseDto": {
+            "type": "object",
+            "properties": {
+                "reason": {
+                    "type": "string"
+                },
+                "success": {
+                    "type": "boolean"
+                }
+            },
+            "title": "ErrorResponseDto"
+        },
+        "Exception": {
+            "type": "object",
+            "properties": {
+                "cause": {
+                    "$ref": "#/definitions/Throwable"
+                },
+                "localizedMessage": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "stackTrace": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/StackTraceElement"
+                    }
+                },
+                "suppressed": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Throwable"
+                    }
+                }
+            },
+            "title": "Exception"
+        },
+        "ImageUrlResponseDto": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "reason": {
+                    "type": "string"
+                },
+                "success": {
+                    "type": "boolean"
+                }
+            },
+            "title": "ImageUrlResponseDto"
+        },
+        "LastUpdate": {
+            "type": "object",
+            "properties": {
+                "lastUpdate": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "lastUpdateId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "lastUpdateName": {
+                    "type": "string"
+                }
+            },
+            "title": "LastUpdate"
+        },
+        "MostPopularCommentDto": {
+            "type": "object",
+            "properties": {
+                "comment": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "score": {
+                    "type": "number",
+                    "format": "double"
+                }
+            },
+            "title": "MostPopularCommentDto"
+        },
+        "MostPopularCommentsResponse": {
+            "type": "object",
+            "properties": {
+                "ExceptionText": {
+                    "$ref": "#/definitions/Exception"
+                },
+                "Reason": {
+                    "type": "string"
+                },
+                "Success": {
+                    "type": "boolean"
+                },
+                "UserComments": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MostPopularCommentDto"
+                    }
+                }
+            },
+            "title": "MostPopularCommentsResponse"
+        },
+        "Product": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "managedImageId": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "productName": {
+                    "type": "string"
+                },
+                "productStatus": {
+                    "type": "string"
+                }
+            },
+            "title": "Product"
+        },
+        "ProductCollectionDto": {
+            "type": "object",
+            "properties": {
+                "colors": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "maxPrice": {
+                    "type": "string"
+                },
+                "minPrice": {
+                    "type": "string"
+                },
+                "products": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ProductDto"
+                    }
+                }
+            },
+            "title": "ProductCollectionDto"
+        },
+        "ProductDto": {
+            "type": "object",
+            "properties": {
+                "attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AttributeItem"
+                    }
+                },
+                "categoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "colors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ColorAttributeDto"
+                    }
+                },
+                "description": {
+                    "type": "string"
+                },
+                "imageUrl": {
+                    "type": "string"
+                },
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "price": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "productId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "productName": {
+                    "type": "string"
+                },
+                "productStatus": {
+                    "type": "string"
+                }
+            },
+            "title": "ProductDto"
+        },
+        "ProductResponseDto": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "imageColor": {
+                    "type": "string"
+                },
+                "imageId": {
+                    "type": "string"
+                },
+                "reason": {
+                    "type": "string"
+                },
+                "success": {
+                    "type": "boolean"
+                }
+            },
+            "title": "ProductResponseDto"
+        },
+        "ProductUploadImagesResponseDto": {
+            "type": "object",
+            "properties": {
+                "productResponseDto": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ProductResponseDto"
+                    }
+                },
+                "productResponseDtos": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ProductResponseDto"
+                    }
+                }
+            },
+            "title": "ProductUploadImagesResponseDto"
+        },
+        "PromotedProductDto": {
+            "type": "object",
+            "properties": {
+                "attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AttributeItem"
+                    }
+                },
+                "color": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "imageUrl": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "productName": {
+                    "type": "string"
+                },
+                "promotionHeader": {
+                    "type": "string"
+                },
+                "promotionImageId": {
+                    "type": "string"
+                },
+                "promotionSubHeader": {
+                    "type": "string"
+                },
+                "staringPrice": {
+                    "type": "string"
+                }
+            },
+            "title": "PromotedProductDto"
+        },
+        "StackTraceElement": {
+            "type": "object",
+            "properties": {
+                "classLoaderName": {
+                    "type": "string"
+                },
+                "className": {
+                    "type": "string"
+                },
+                "fileName": {
+                    "type": "string"
+                },
+                "lineNumber": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "methodName": {
+                    "type": "string"
+                },
+                "moduleName": {
+                    "type": "string"
+                },
+                "moduleVersion": {
+                    "type": "string"
+                },
+                "nativeMethod": {
+                    "type": "boolean"
+                }
+            },
+            "title": "StackTraceElement"
+        },
+        "Throwable": {
+            "type": "object",
+            "properties": {
+                "cause": {
+                    "$ref": "#/definitions/Throwable"
+                },
+                "localizedMessage": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "stackTrace": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/StackTraceElement"
+                    }
+                },
+                "suppressed": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Throwable"
+                    }
+                }
+            },
+            "title": "Throwable"
+        },
+        "AccountCreateRequest": {
+            "type": "object",
+            "properties": {
+                "accountType": {
+                    "type": "string",
+                    "xml": {
+                        "name": "accountType",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    },
+                    "enum": [
+                        "USER",
+                        "ADMIN",
+                        "GUEST"
+                    ]
+                },
+                "address": {
+                    "type": "string",
+                    "xml": {
+                        "name": "address",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "allowOffersPromotion": {
+                    "type": "boolean",
+                    "xml": {
+                        "name": "allowOffersPromotion",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "cityName": {
+                    "type": "string",
+                    "xml": {
+                        "name": "cityName",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "country": {
+                    "type": "string",
+                    "enum": [
+                        "AUSTRALIA_AU",
+                        "AUSTRIA_AT",
+                        "BRAZIL_BR",
+                        "CANADA_CA",
+                        "CHINA_CN",
+                        "CROATIA_HR",
+                        "DENMARK_DK",
+                        "EGYPT_EG",
+                        "ENGLAND_UK",
+                        "FRANCE_FR",
+                        "GERMANY_DE",
+                        "GREECE_GR",
+                        "INDIA_IN",
+                        "ISRAEL_IL",
+                        "ITALY_IT",
+                        "JAPAN_JP",
+                        "MEXICO_MX",
+                        "NETHERLAND_NL",
+                        "NORWAY_NO",
+                        "NEW_ZEALAND_NZ",
+                        "SPAIN_ES",
+                        "SOUTH_KOREA_KR",
+                        "NORTH_KOREA_KP",
+                        "PORTUGAL_PT",
+                        "QATAR_QA",
+                        "ROMANIA_RO",
+                        "RUSSIA_RU",
+                        "SOUTH_AFRICA_ZA",
+                        "SWEDEN_SE",
+                        "SWITZERLAND_CH",
+                        "THAILAND_TH",
+                        "TUNISIA_TN",
+                        "TURKEY_TR",
+                        "UKRAINE_UA",
+                        "UNITED_KINGDOM_UK",
+                        "UNITED_STATES_US",
+                        "YEMEN_YE"
+                    ]
+                },
+                "email": {
+                    "type": "string",
+                    "xml": {
+                        "name": "email",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "firstName": {
+                    "type": "string",
+                    "xml": {
+                        "name": "firstName",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "lastName": {
+                    "type": "string",
+                    "xml": {
+                        "name": "lastName",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "loginName": {
+                    "type": "string",
+                    "xml": {
+                        "name": "loginName",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "password": {
+                    "type": "string",
+                    "xml": {
+                        "name": "password",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "phoneNumber": {
+                    "type": "string",
+                    "xml": {
+                        "name": "phoneNumber",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "stateProvince": {
+                    "type": "string",
+                    "xml": {
+                        "name": "stateProvince",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "zipcode": {
+                    "type": "string",
+                    "xml": {
+                        "name": "zipcode",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                }
+            },
+            "title": "AccountCreateRequest",
+            "xml": {
+                "name": "AccountCreateRequest",
+                "namespace": "com.advantage.online.store.accountservice",
+                "attribute": false,
+                "wrapped": false
+            }
+        },
+        "AccountCreateResponse": {
+            "type": "object",
+            "properties": {
+                "response": {
+                    "xml": {
+                        "name": "StatusMessage",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    },
+                    "$ref": "#/definitions/AccountStatusResponse"
+                }
+            },
+            "title": "AccountCreateResponse",
+            "xml": {
+                "name": "AccountCreateResponse",
+                "namespace": "com.advantage.online.store.accountservice",
+                "attribute": false,
+                "wrapped": false
+            }
+        },
+        "AccountDeleteRequest": {
+            "type": "object",
+            "properties": {
+                "accountId": {
+                    "type": "integer",
+                    "format": "int64",
+                    "xml": {
+                        "name": "accountId",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "base64Token": {
+                    "type": "string",
+                    "xml": {
+                        "name": "base64Token",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    },
+                    "description": "Use the returned token value from /login request."
+                }
+            },
+            "title": "AccountDeleteRequest",
+            "xml": {
+                "name": "AccountDeleteRequest",
+                "namespace": "com.advantage.online.store.accountservice",
+                "attribute": false,
+                "wrapped": false
+            }
+        },
+        "AccountDeleteResponse": {
+            "type": "object",
+            "properties": {
+                "response": {
+                    "xml": {
+                        "name": "StatusMessage",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    },
+                    "$ref": "#/definitions/AccountStatusResponse"
+                }
+            },
+            "title": "AccountDeleteResponse",
+            "xml": {
+                "name": "AccountDeleteResponse",
+                "namespace": "com.advantage.online.store.accountservice",
+                "attribute": false,
+                "wrapped": false
+            }
+        },
+        "AccountLoginRequest": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "xml": {
+                        "name": "email",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "loginPassword": {
+                    "type": "string",
+                    "xml": {
+                        "name": "loginPassword",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "loginUser": {
+                    "type": "string",
+                    "xml": {
+                        "name": "loginUser",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                }
+            },
+            "title": "AccountLoginRequest",
+            "xml": {
+                "name": "AccountLoginRequest",
+                "namespace": "com.advantage.online.store.accountservice",
+                "attribute": false,
+                "wrapped": false
+            }
+        },
+        "AccountLoginResponse": {
+            "type": "object",
+            "properties": {
+                "statusMessage": {
+                    "xml": {
+                        "name": "StatusMessage",
+                        "attribute": false,
+                        "wrapped": false
+                    },
+                    "$ref": "#/definitions/StatusMessage"
+                }
+            },
+            "title": "AccountLoginResponse"
+        },
+        "AccountLogoutRequest": {
+            "type": "object",
+            "properties": {
+                "accountId": {
+                    "type": "string"
+                },
+                "token": {
+                    "type": "string"
+                }
+            },
+            "title": "AccountLogoutRequest",
+            "xml": {
+                "name": "AccountLogoutRequest",
+                "namespace": "com.advantage.online.store.accountservice",
+                "attribute": false,
+                "wrapped": false
+            }
+        },
+        "AccountLogoutResponse": {
+            "type": "object",
+            "properties": {
+                "response": {
+                    "xml": {
+                        "name": "StatusMessage",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    },
+                    "$ref": "#/definitions/AccountStatusResponse"
+                },
+                "statusMessage": {
+                    "xml": {
+                        "name": "StatusMessage",
+                        "attribute": false,
+                        "wrapped": false
+                    },
+                    "$ref": "#/definitions/StatusMessage"
+                }
+            },
+            "title": "AccountLogoutResponse"
+        },
+        "AccountPermanentDeleteRequest": {
+            "type": "object",
+            "properties": {
+                "accountId": {
+                    "type": "integer",
+                    "format": "int64",
+                    "xml": {
+                        "name": "accountId",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                }
+            },
+            "title": "AccountPermanentDeleteRequest",
+            "xml": {
+                "name": "AccountPermanentDeleteRequest",
+                "namespace": "com.advantage.online.store.accountservice",
+                "attribute": false,
+                "wrapped": false
+            }
+        },
+        "AccountPermanentDeleteResponse": {
+            "type": "object",
+            "properties": {
+                "statusMessage": {
+                    "$ref": "#/definitions/AccountStatusResponse"
+                }
+            },
+            "title": "AccountPermanentDeleteResponse",
+            "xml": {
+                "name": "AccountPermanentDeleteResponse",
+                "namespace": "com.advantage.online.store.accountservice",
+                "attribute": false,
+                "wrapped": false
+            }
+        },
+        "AccountStatusResponse": {
+            "type": "object",
+            "properties": {
+                "accountType": {
+                    "type": "integer",
+                    "format": "int32",
+                    "xml": {
+                        "name": "accountType",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "reason": {
+                    "type": "string",
+                    "xml": {
+                        "name": "reason",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "sessionId": {
+                    "type": "string",
+                    "xml": {
+                        "name": "sessionId",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "success": {
+                    "type": "boolean",
+                    "xml": {
+                        "name": "success",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "t_authorization": {
+                    "type": "string",
+                    "xml": {
+                        "name": "t_authorization",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "token": {
+                    "type": "string",
+                    "xml": {
+                        "name": "token",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "userId": {
+                    "type": "integer",
+                    "format": "int64",
+                    "xml": {
+                        "name": "userId",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                }
+            },
+            "title": "AccountStatusResponse"
+        },
+        "ChangePasswordRequest": {
+            "type": "object",
+            "properties": {
+                "accountId": {
+                    "type": "integer",
+                    "format": "int64",
+                    "xml": {
+                        "name": "accountId",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "newPassword": {
+                    "type": "string",
+                    "xml": {
+                        "name": "newPassword",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    },
+                    "description": "Password must contain at least one upper case letter and one lower case letter"
+                },
+                "oldPassword": {
+                    "type": "string",
+                    "xml": {
+                        "name": "oldPassword",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                }
+            },
+            "title": "ChangePasswordRequest",
+            "xml": {
+                "name": "ChangePasswordRequest",
+                "namespace": "com.advantage.online.store.accountservice",
+                "attribute": false,
+                "wrapped": false
+            }
+        },
+        "ChangePasswordResponse": {
+            "type": "object",
+            "properties": {
+                "response": {
+                    "xml": {
+                        "name": "StatusMessage",
+                        "namespace": "com.advantage.online.store.accountservice",
+                        "attribute": false,
+                        "wrapped": false
+                    },
+                    "$ref": "#/definitions/AccountStatusResponse"
+                }
+            },
+            "title": "ChangePasswordResponse",
+            "xml": {
+                "name": "ChangePasswordResponse",
+                "namespace": "com.advantage.online.store.accountservice",
+                "attribute": false,
+                "wrapped": false
+            }
+        },
+        "StatusMessage": {
+            "type": "object",
+            "properties": {
+                "reason": {
+                    "type": "string",
+                    "xml": {
+                        "name": "reason",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "sessionId": {
+                    "type": "string",
+                    "xml": {
+                        "name": "sessionId",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "success": {
+                    "type": "boolean"
+                },
+                "token": {
+                    "type": "string",
+                    "xml": {
+                        "name": "token",
+                        "attribute": false,
+                        "wrapped": false
+                    }
+                },
+                "userId": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            },
+            "title": "StatusMessage"
+        }
+    }
+}
