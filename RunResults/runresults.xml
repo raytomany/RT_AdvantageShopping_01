@@ -1,7 +1,7 @@
 <Results>
     <GeneralInfo>
         <Name/>
-        <RunStartTime>2021-02-19 16:43:26</RunStartTime>
+        <RunStartTime>2021-02-19 17:14:09</RunStartTime>
         <Timezone>GMT+0000 (Greenwich Mean Time)</Timezone>
         <OrchestrationToolName>JUnit</OrchestrationToolName>
         <OrchestrationToolVersion/>
@@ -14,11 +14,11 @@
             <Description>
                 <![CDATA[ ]]>
             </Description>
-            <StartTime>2021-02-19 16:43:26</StartTime>
-            <Result>Failed</Result>
+            <StartTime>2021-02-19 17:14:09</StartTime>
+            <Result>Passed</Result>
             <Links/>
             <Duration>
-                <![CDATA[00:00:00.643]]>
+                <![CDATA[00:02:26.543]]>
             </Duration>
             <Extension>
                 <Any>
@@ -28,7 +28,7 @@
             </Extension>
             <Environment>
                 <OSInfo>
-                    <![CDATA[Darwin 20.2.0]]>
+                    <![CDATA[Darwin 20.3.0]]>
                 </OSInfo>
                 <HostName>
                     <![CDATA[Rays-MacBook-Pro-2.local]]>
@@ -58,11 +58,11 @@
                 <Description>
                     <![CDATA[Version: N/A]]>
                 </Description>
-                <StartTime>2021-02-19 16:43:26</StartTime>
-                <Result>Failed</Result>
+                <StartTime>2021-02-19 17:14:09</StartTime>
+                <Result>Passed</Result>
                 <Links/>
                 <Duration>
-                    <![CDATA[00:00:00.582]]>
+                    <![CDATA[00:02:26.492]]>
                 </Duration>
                 <Extension>
                     <Any>
@@ -77,11 +77,11 @@
                         <![CDATA[com.company.UFTDeveloperTest]]>
                     </Name>
                     <Description/>
-                    <StartTime>2021-02-19 16:43:26</StartTime>
-                    <Result>Failed</Result>
+                    <StartTime>2021-02-19 17:14:09</StartTime>
+                    <Result>Passed</Result>
                     <Links/>
                     <Duration>
-                        <![CDATA[00:00:00.582]]>
+                        <![CDATA[00:02:26.492]]>
                     </Duration>
                     <Extension>
                         <Any>
@@ -94,70 +94,11 @@
                     <Data>
                         <Name>test</Name>
                         <Description/>
-                        <StartTime>2021-02-19 16:43:26</StartTime>
-                        <Result>Failed</Result>
-                        <ErrorText>
-                            <![CDATA[<pre>com.hp.lft.sdk.mobile.MobileReplayException: The specified device could not be locked for use. Try another device. [error 2009]
-	at com.hp.lft.sdk.internal.ReplayExceptionFactory$36.create(ReplayExceptionFactory.java:246)
-	at com.hp.lft.sdk.internal.ReplayExceptionFactory.createOrDefault(ReplayExceptionFactory.java:289)
-	at com.hp.lft.sdk.internal.ReplayExceptionFactory.createOrDefault(ReplayExceptionFactory.java:22)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$MobileErrorHandler.onError(MobileCenterInstance.java:303)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$MobileErrorHandler.onError(MobileCenterInstance.java:313)
-	at com.hp.lft.sdk.internal.CommunicationClientImpl.handleError(CommunicationClientImpl.java:222)
-	at com.hp.lft.sdk.internal.CommunicationClientImpl.send(CommunicationClientImpl.java:96)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance.doLockDevice(MobileCenterInstance.java:166)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$4.invoke(MobileCenterInstance.java:98)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$4.invoke(MobileCenterInstance.java:79)
-	at com.hp.lft.sdk.internal.TestObjectOperationWrapper.executeWithEvents(TestObjectOperationWrapper.java:109)
-	at com.hp.lft.sdk.internal.TestObjectOperationWrapper.executeWithEvents(TestObjectOperationWrapper.java:97)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance.lockDevice(MobileCenterInstance.java:101)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$1.invoke(MobileCenterInstance.java:42)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$1.invoke(MobileCenterInstance.java:37)
-	at com.hp.lft.sdk.internal.TestObjectOperationWrapper.executeWithEvents(TestObjectOperationWrapper.java:109)
-	at com.hp.lft.sdk.internal.TestObjectOperationWrapper.executeWithEvents(TestObjectOperationWrapper.java:97)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance.lockDevice(MobileCenterInstance.java:45)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$5.invoke(MobileCenterInstance.java:109)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$5.invoke(MobileCenterInstance.java:106)
-	at com.hp.lft.sdk.internal.TestObjectOperationWrapper.executeWithEvents(TestObjectOperationWrapper.java:120)
-	at com.hp.lft.sdk.internal.TestObjectOperationWrapper.executeWithEvents(TestObjectOperationWrapper.java:97)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance.lockDeviceById(MobileCenterInstance.java:112)
-	at com.hp.lft.sdk.mobile.MobileLab.lockDeviceById(MobileLab.java:72)
-	at com.company.UFTDeveloperTest.test(UFTDeveloperTest.java:46)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
-	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
-	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
-</pre>]]>
-                        </ErrorText>
+                        <StartTime>2021-02-19 17:14:09</StartTime>
+                        <Result>Passed</Result>
                         <Links/>
                         <Duration>
-                            <![CDATA[00:00:00.566]]>
+                            <![CDATA[00:02:26.485]]>
                         </Duration>
                         <Extension>
                             <Any>
@@ -172,69 +113,10 @@
                                 <![CDATA[Device.Lock]]>
                             </Name>
                             <Description>
-                                <![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>9889d63758434f4b39</td></tr></table>]]>
+                                <![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>9889d63758434f4b39</td></tr></table><style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><p><div class=data-label><hr><b>Device Information</b></div> </p><style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>id</td><td class='ex-value'>9889d63758434f4b39</td></tr><tr><td class='ex-name'>name</td><td class='ex-value'>SM-G950F</td></tr><tr><td class='ex-name'>model</td><td class='ex-value'>SM-G950F</td></tr><tr><td class='ex-name'>manufacturer</td><td class='ex-value'>samsung</td></tr><tr><td class='ex-name'>os type</td><td class='ex-value'>ANDROID</td></tr><tr><td class='ex-name'>os version</td><td class='ex-value'>9</td></tr></table>]]>
                             </Description>
-                            <StartTime>2021-02-19 16:43:26</StartTime>
-                            <Result>Failed</Result>
-                            <ErrorText>
-                                <![CDATA[<b>Operation 'Device.Lock' failed:</b><BR/><pre>com.hp.lft.sdk.mobile.MobileReplayException: The specified device could not be locked for use. Try another device. [error 2009]
-	at com.hp.lft.sdk.internal.ReplayExceptionFactory$36.create(ReplayExceptionFactory.java:246)
-	at com.hp.lft.sdk.internal.ReplayExceptionFactory.createOrDefault(ReplayExceptionFactory.java:289)
-	at com.hp.lft.sdk.internal.ReplayExceptionFactory.createOrDefault(ReplayExceptionFactory.java:22)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$MobileErrorHandler.onError(MobileCenterInstance.java:303)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$MobileErrorHandler.onError(MobileCenterInstance.java:313)
-	at com.hp.lft.sdk.internal.CommunicationClientImpl.handleError(CommunicationClientImpl.java:222)
-	at com.hp.lft.sdk.internal.CommunicationClientImpl.send(CommunicationClientImpl.java:96)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance.doLockDevice(MobileCenterInstance.java:166)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$4.invoke(MobileCenterInstance.java:98)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$4.invoke(MobileCenterInstance.java:79)
-	at com.hp.lft.sdk.internal.TestObjectOperationWrapper.executeWithEvents(TestObjectOperationWrapper.java:109)
-	at com.hp.lft.sdk.internal.TestObjectOperationWrapper.executeWithEvents(TestObjectOperationWrapper.java:97)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance.lockDevice(MobileCenterInstance.java:101)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$1.invoke(MobileCenterInstance.java:42)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$1.invoke(MobileCenterInstance.java:37)
-	at com.hp.lft.sdk.internal.TestObjectOperationWrapper.executeWithEvents(TestObjectOperationWrapper.java:109)
-	at com.hp.lft.sdk.internal.TestObjectOperationWrapper.executeWithEvents(TestObjectOperationWrapper.java:97)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance.lockDevice(MobileCenterInstance.java:45)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$5.invoke(MobileCenterInstance.java:109)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance$5.invoke(MobileCenterInstance.java:106)
-	at com.hp.lft.sdk.internal.TestObjectOperationWrapper.executeWithEvents(TestObjectOperationWrapper.java:120)
-	at com.hp.lft.sdk.internal.TestObjectOperationWrapper.executeWithEvents(TestObjectOperationWrapper.java:97)
-	at com.hp.lft.sdk.internal.mobile.MobileCenterInstance.lockDeviceById(MobileCenterInstance.java:112)
-	at com.hp.lft.sdk.mobile.MobileLab.lockDeviceById(MobileLab.java:72)
-	at com.company.UFTDeveloperTest.test(UFTDeveloperTest.java:46)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
-	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
-	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
-</pre>]]>
-                            </ErrorText>
+                            <StartTime>2021-02-19 17:14:09</StartTime>
+                            <Result>Passed</Result>
                             <Links/>
                             <Duration>
                                 <![CDATA[00:00:00.000]]>
@@ -245,7 +127,7 @@
                                         <Path/>
                                         <Operation/>
                                         <OperationData>
-                                            <![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>9889d63758434f4b39</td></tr></table>]]>
+                                            <![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>9889d63758434f4b39</td></tr></table><style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><p><div class=data-label><hr><b>Device Information</b></div> </p><style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>id</td><td class='ex-value'>9889d63758434f4b39</td></tr><tr><td class='ex-name'>name</td><td class='ex-value'>SM-G950F</td></tr><tr><td class='ex-name'>model</td><td class='ex-value'>SM-G950F</td></tr><tr><td class='ex-name'>manufacturer</td><td class='ex-value'>samsung</td></tr><tr><td class='ex-name'>os type</td><td class='ex-value'>ANDROID</td></tr><tr><td class='ex-name'>os version</td><td class='ex-value'>9</td></tr></table>]]>
                                         </OperationData>
                                         <Properties/>
                                     </TestObject>
@@ -260,6 +142,1413 @@
                                             <![CDATA[Device.Lock]]>
                                         </FlowTreeNodeTooltip>
                                     </CustomUIElements>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>
+                                <![CDATA[Device.openViewer]]>
+                            </Name>
+                            <Description/>
+                            <StartTime>2021-02-19 17:14:17</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>
+                                <![CDATA[00:00:11.735]]>
+                            </Duration>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Mobile.Device</Type>
+                                                <Name>
+                                                    <![CDATA[Device]]>
+                                                </Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>openViewer</Operation>
+                                        <OperationData/>
+                                        <Properties>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[id]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[9889d63758434f4b39]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[name]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[SM-G950F]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[model]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[SM-G950F]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[manufacturer]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[samsung]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[os type]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[ANDROID]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[os version]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[9]]>
+                                                </Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>Device</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Mobile.Device</Type>
+                                                    <Name>
+                                                        <![CDATA[Device]]>
+                                                    </Name>
+                                                    <IconKey>Device</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>
+                                <![CDATA[Advantage Shopping.launch]]>
+                            </Name>
+                            <Description/>
+                            <StartTime>2021-02-19 17:14:28</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>
+                                <![CDATA[00:00:09.692]]>
+                            </Duration>
+                            <Snapshot reference="Resources/Snapshots/65838492-816d-48f0-82e0-8d180a7ec090.png">
+                                <reference>
+                                    <![CDATA[Resources/Snapshots/65838492-816d-48f0-82e0-8d180a7ec090.png]]>
+                                </reference>
+                            </Snapshot>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Mobile.Device</Type>
+                                                <Name>
+                                                    <![CDATA[Device]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.Application</Type>
+                                                <Name>
+                                                    <![CDATA[Advantage Shopping]]>
+                                                </Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>launch</Operation>
+                                        <OperationData/>
+                                        <Properties>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[isPackaged]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[false]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[identifier]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA["com.Advantage.aShopping"]]>
+                                                </Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>Application</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Mobile.Device</Type>
+                                                    <Name>
+                                                        <![CDATA[Device]]>
+                                                    </Name>
+                                                    <IconKey>Device</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.Application</Type>
+                                                    <Name>
+                                                        <![CDATA[Advantage Shopping]]>
+                                                    </Name>
+                                                    <IconKey>Application</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>
+                                <![CDATA[imageViewSearch.tap]]>
+                            </Name>
+                            <Description/>
+                            <StartTime>2021-02-19 17:14:39</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>
+                                <![CDATA[00:00:15.311]]>
+                            </Duration>
+                            <Snapshot reference="Resources/Snapshots/a3b03159-b7bb-48c9-be7b-5837634e5219.png">
+                                <reference>
+                                    <![CDATA[Resources/Snapshots/a3b03159-b7bb-48c9-be7b-5837634e5219.png]]>
+                                </reference>
+                            </Snapshot>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Mobile.Device</Type>
+                                                <Name>
+                                                    <![CDATA[Device]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.Application</Type>
+                                                <Name>
+                                                    <![CDATA[Advantage Shopping]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.UiObject</Type>
+                                                <Name>
+                                                    <![CDATA[imageViewSearch]]>
+                                                </Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>tap</Operation>
+                                        <OperationData/>
+                                        <Properties>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[nativeClass]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[android.widget.ImageView]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[resourceId]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[com.Advantage.aShopping:id/imageViewSearch]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[mobileCenterIndex]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[2]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[className]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA["ImageView"]]>
+                                                </Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>UiObject</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Mobile.Device</Type>
+                                                    <Name>
+                                                        <![CDATA[Device]]>
+                                                    </Name>
+                                                    <IconKey>Device</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.Application</Type>
+                                                    <Name>
+                                                        <![CDATA[Advantage Shopping]]>
+                                                    </Name>
+                                                    <IconKey>Application</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.UiObject</Type>
+                                                    <Name>
+                                                        <![CDATA[imageViewSearch]]>
+                                                    </Name>
+                                                    <IconKey>UiObject</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>
+                                <![CDATA[Device.sendString]]>
+                            </Name>
+                            <Description>
+                                <![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>17t</td></tr></table>]]>
+                            </Description>
+                            <StartTime>2021-02-19 17:14:54</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>
+                                <![CDATA[00:00:03.273]]>
+                            </Duration>
+                            <Snapshot reference="Resources/Snapshots/86ceade3-b41d-4656-86d6-2705a2fadaa3.png">
+                                <reference>
+                                    <![CDATA[Resources/Snapshots/86ceade3-b41d-4656-86d6-2705a2fadaa3.png]]>
+                                </reference>
+                            </Snapshot>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Mobile.Device</Type>
+                                                <Name>
+                                                    <![CDATA[Device]]>
+                                                </Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>sendString</Operation>
+                                        <OperationData>
+                                            <![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>17t</td></tr></table>]]>
+                                        </OperationData>
+                                        <Properties>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[id]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[9889d63758434f4b39]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[name]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[SM-G950F]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[model]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[SM-G950F]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[manufacturer]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[samsung]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[os type]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[ANDROID]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[os version]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[9]]>
+                                                </Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>Device</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Mobile.Device</Type>
+                                                    <Name>
+                                                        <![CDATA[Device]]>
+                                                    </Name>
+                                                    <IconKey>Device</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>
+                                <![CDATA[imageViewSearch.tap]]>
+                            </Name>
+                            <Description/>
+                            <StartTime>2021-02-19 17:14:57</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>
+                                <![CDATA[00:00:15.193]]>
+                            </Duration>
+                            <Snapshot reference="Resources/Snapshots/80ced1b8-77c2-444c-8ce4-9053c668cc69.png">
+                                <reference>
+                                    <![CDATA[Resources/Snapshots/80ced1b8-77c2-444c-8ce4-9053c668cc69.png]]>
+                                </reference>
+                            </Snapshot>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Mobile.Device</Type>
+                                                <Name>
+                                                    <![CDATA[Device]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.Application</Type>
+                                                <Name>
+                                                    <![CDATA[Advantage Shopping]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.UiObject</Type>
+                                                <Name>
+                                                    <![CDATA[imageViewSearch]]>
+                                                </Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>tap</Operation>
+                                        <OperationData/>
+                                        <Properties>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[nativeClass]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[android.widget.ImageView]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[resourceId]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[com.Advantage.aShopping:id/imageViewSearch]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[mobileCenterIndex]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[2]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[className]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA["ImageView"]]>
+                                                </Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>UiObject</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Mobile.Device</Type>
+                                                    <Name>
+                                                        <![CDATA[Device]]>
+                                                    </Name>
+                                                    <IconKey>Device</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.Application</Type>
+                                                    <Name>
+                                                        <![CDATA[Advantage Shopping]]>
+                                                    </Name>
+                                                    <IconKey>Application</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.UiObject</Type>
+                                                    <Name>
+                                                        <![CDATA[imageViewSearch]]>
+                                                    </Name>
+                                                    <IconKey>UiObject</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>
+                                <![CDATA[HP ENVY - 17T TOUCH LAPTOP.tap]]>
+                            </Name>
+                            <Description/>
+                            <StartTime>2021-02-19 17:15:13</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>
+                                <![CDATA[00:00:11.977]]>
+                            </Duration>
+                            <Snapshot reference="Resources/Snapshots/6e6ab115-ca4d-449b-ace3-8f49ab562f77.png">
+                                <reference>
+                                    <![CDATA[Resources/Snapshots/6e6ab115-ca4d-449b-ace3-8f49ab562f77.png]]>
+                                </reference>
+                            </Snapshot>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Mobile.Device</Type>
+                                                <Name>
+                                                    <![CDATA[Device]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.Application</Type>
+                                                <Name>
+                                                    <![CDATA[Advantage Shopping]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.Label</Type>
+                                                <Name>
+                                                    <![CDATA[HP ENVY - 17T TOUCH LAPTOP]]>
+                                                </Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>tap</Operation>
+                                        <OperationData/>
+                                        <Properties>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[text]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[HP ENVY - 17T TOUCH LAPTOP]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[nativeClass]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[android.widget.TextView]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[resourceId]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[com.Advantage.aShopping:id/textViewProductName]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[mobileCenterIndex]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[2]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[className]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA["Label"]]>
+                                                </Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>Label</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Mobile.Device</Type>
+                                                    <Name>
+                                                        <![CDATA[Device]]>
+                                                    </Name>
+                                                    <IconKey>Device</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.Application</Type>
+                                                    <Name>
+                                                        <![CDATA[Advantage Shopping]]>
+                                                    </Name>
+                                                    <IconKey>Application</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.Label</Type>
+                                                    <Name>
+                                                        <![CDATA[HP ENVY - 17T TOUCH LAPTOP]]>
+                                                    </Name>
+                                                    <IconKey>Label</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>
+                                <![CDATA[ADD TO CART.tap]]>
+                            </Name>
+                            <Description/>
+                            <StartTime>2021-02-19 17:15:25</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>
+                                <![CDATA[00:00:13.767]]>
+                            </Duration>
+                            <Snapshot reference="Resources/Snapshots/bf0500c7-832b-4599-80ff-faeb0688d2a9.png">
+                                <reference>
+                                    <![CDATA[Resources/Snapshots/bf0500c7-832b-4599-80ff-faeb0688d2a9.png]]>
+                                </reference>
+                            </Snapshot>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Mobile.Device</Type>
+                                                <Name>
+                                                    <![CDATA[Device]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.Application</Type>
+                                                <Name>
+                                                    <![CDATA[Advantage Shopping]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.Button</Type>
+                                                <Name>
+                                                    <![CDATA[ADD TO CART]]>
+                                                </Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>tap</Operation>
+                                        <OperationData/>
+                                        <Properties>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[text]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[ADD TO CART]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[nativeClass]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[android.widget.Button]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[resourceId]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[com.Advantage.aShopping:id/buttonProductAddToCart]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[mobileCenterIndex]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[0]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[className]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA["Button"]]>
+                                                </Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>Button</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Mobile.Device</Type>
+                                                    <Name>
+                                                        <![CDATA[Device]]>
+                                                    </Name>
+                                                    <IconKey>Device</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.Application</Type>
+                                                    <Name>
+                                                        <![CDATA[Advantage Shopping]]>
+                                                    </Name>
+                                                    <IconKey>Application</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.Button</Type>
+                                                    <Name>
+                                                        <![CDATA[ADD TO CART]]>
+                                                    </Name>
+                                                    <IconKey>Button</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>
+                                <![CDATA[imageViewBack.tap]]>
+                            </Name>
+                            <Description/>
+                            <StartTime>2021-02-19 17:15:38</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>
+                                <![CDATA[00:00:12.508]]>
+                            </Duration>
+                            <Snapshot reference="Resources/Snapshots/ddcd0126-765a-401f-bd08-537415e854d7.png">
+                                <reference>
+                                    <![CDATA[Resources/Snapshots/ddcd0126-765a-401f-bd08-537415e854d7.png]]>
+                                </reference>
+                            </Snapshot>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Mobile.Device</Type>
+                                                <Name>
+                                                    <![CDATA[Device]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.Application</Type>
+                                                <Name>
+                                                    <![CDATA[Advantage Shopping]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.UiObject</Type>
+                                                <Name>
+                                                    <![CDATA[imageViewBack]]>
+                                                </Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>tap</Operation>
+                                        <OperationData/>
+                                        <Properties>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[nativeClass]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[android.widget.ImageView]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[resourceId]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[com.Advantage.aShopping:id/imageViewBack]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[mobileCenterIndex]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[0]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[className]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA["ImageView"]]>
+                                                </Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>UiObject</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Mobile.Device</Type>
+                                                    <Name>
+                                                        <![CDATA[Device]]>
+                                                    </Name>
+                                                    <IconKey>Device</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.Application</Type>
+                                                    <Name>
+                                                        <![CDATA[Advantage Shopping]]>
+                                                    </Name>
+                                                    <IconKey>Application</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.UiObject</Type>
+                                                    <Name>
+                                                        <![CDATA[imageViewBack]]>
+                                                    </Name>
+                                                    <IconKey>UiObject</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>
+                                <![CDATA[imageViewBack.tap]]>
+                            </Name>
+                            <Description/>
+                            <StartTime>2021-02-19 17:15:51</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>
+                                <![CDATA[00:00:14.485]]>
+                            </Duration>
+                            <Snapshot reference="Resources/Snapshots/7bf2213b-d32b-4be9-ba41-eb7f61f927e6.png">
+                                <reference>
+                                    <![CDATA[Resources/Snapshots/7bf2213b-d32b-4be9-ba41-eb7f61f927e6.png]]>
+                                </reference>
+                            </Snapshot>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Mobile.Device</Type>
+                                                <Name>
+                                                    <![CDATA[Device]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.Application</Type>
+                                                <Name>
+                                                    <![CDATA[Advantage Shopping]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.UiObject</Type>
+                                                <Name>
+                                                    <![CDATA[imageViewBack]]>
+                                                </Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>tap</Operation>
+                                        <OperationData/>
+                                        <Properties>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[nativeClass]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[android.widget.ImageView]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[resourceId]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[com.Advantage.aShopping:id/imageViewBack]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[mobileCenterIndex]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[0]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[className]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA["ImageView"]]>
+                                                </Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>UiObject</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Mobile.Device</Type>
+                                                    <Name>
+                                                        <![CDATA[Device]]>
+                                                    </Name>
+                                                    <IconKey>Device</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.Application</Type>
+                                                    <Name>
+                                                        <![CDATA[Advantage Shopping]]>
+                                                    </Name>
+                                                    <IconKey>Application</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.UiObject</Type>
+                                                    <Name>
+                                                        <![CDATA[imageViewBack]]>
+                                                    </Name>
+                                                    <IconKey>UiObject</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>
+                                <![CDATA[imageViewMenu.tap]]>
+                            </Name>
+                            <Description/>
+                            <StartTime>2021-02-19 17:16:05</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>
+                                <![CDATA[00:00:12.175]]>
+                            </Duration>
+                            <Snapshot reference="Resources/Snapshots/97fc6377-b9e1-4243-95eb-395a44d59d3f.png">
+                                <reference>
+                                    <![CDATA[Resources/Snapshots/97fc6377-b9e1-4243-95eb-395a44d59d3f.png]]>
+                                </reference>
+                            </Snapshot>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Mobile.Device</Type>
+                                                <Name>
+                                                    <![CDATA[Device]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.Application</Type>
+                                                <Name>
+                                                    <![CDATA[Advantage Shopping]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.UiObject</Type>
+                                                <Name>
+                                                    <![CDATA[imageViewMenu]]>
+                                                </Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>tap</Operation>
+                                        <OperationData/>
+                                        <Properties>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[nativeClass]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[android.widget.ImageView]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[resourceId]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[com.Advantage.aShopping:id/imageViewMenu]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[mobileCenterIndex]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[0]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[className]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA["ImageView"]]>
+                                                </Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>UiObject</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Mobile.Device</Type>
+                                                    <Name>
+                                                        <![CDATA[Device]]>
+                                                    </Name>
+                                                    <IconKey>Device</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.Application</Type>
+                                                    <Name>
+                                                        <![CDATA[Advantage Shopping]]>
+                                                    </Name>
+                                                    <IconKey>Application</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.UiObject</Type>
+                                                    <Name>
+                                                        <![CDATA[imageViewMenu]]>
+                                                    </Name>
+                                                    <IconKey>UiObject</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>
+                                <![CDATA[HOME.tap]]>
+                            </Name>
+                            <Description/>
+                            <StartTime>2021-02-19 17:16:18</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>
+                                <![CDATA[00:00:16.151]]>
+                            </Duration>
+                            <Snapshot reference="Resources/Snapshots/7298e945-c058-4a54-ae3b-87be167bffe7.png">
+                                <reference>
+                                    <![CDATA[Resources/Snapshots/7298e945-c058-4a54-ae3b-87be167bffe7.png]]>
+                                </reference>
+                            </Snapshot>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Mobile.Device</Type>
+                                                <Name>
+                                                    <![CDATA[Device]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.Application</Type>
+                                                <Name>
+                                                    <![CDATA[Advantage Shopping]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.Label</Type>
+                                                <Name>
+                                                    <![CDATA[HOME]]>
+                                                </Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>tap</Operation>
+                                        <OperationData/>
+                                        <Properties>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[text]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[HOME]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[nativeClass]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[android.widget.TextView]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[resourceId]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[com.Advantage.aShopping:id/textViewMenuHome]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[mobileCenterIndex]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[6]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[className]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA["Label"]]>
+                                                </Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>Label</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Mobile.Device</Type>
+                                                    <Name>
+                                                        <![CDATA[Device]]>
+                                                    </Name>
+                                                    <IconKey>Device</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.Application</Type>
+                                                    <Name>
+                                                        <![CDATA[Advantage Shopping]]>
+                                                    </Name>
+                                                    <IconKey>Application</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.Label</Type>
+                                                    <Name>
+                                                        <![CDATA[HOME]]>
+                                                    </Name>
+                                                    <IconKey>Label</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>
+                                <![CDATA[[Application].kill]]>
+                            </Name>
+                            <Description/>
+                            <StartTime>2021-02-19 17:16:34</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>
+                                <![CDATA[00:00:01.597]]>
+                            </Duration>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Mobile.Device</Type>
+                                                <Name>
+                                                    <![CDATA[[Device]]]>
+                                                </Name>
+                                            </Object>
+                                            <Object>
+                                                <Type>Mobile.Application</Type>
+                                                <Name>
+                                                    <![CDATA[[Application]]]>
+                                                </Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>kill</Operation>
+                                        <OperationData/>
+                                        <Properties>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[isPackaged]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[false]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[identifier]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA["com.Advantage.aShopping"]]>
+                                                </Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>Application</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Mobile.Device</Type>
+                                                    <Name>
+                                                        <![CDATA[[Device]]]>
+                                                    </Name>
+                                                    <IconKey>Device</IconKey>
+                                                </Object>
+                                                <Object>
+                                                    <Type>Mobile.Application</Type>
+                                                    <Name>
+                                                        <![CDATA[[Application]]]>
+                                                    </Name>
+                                                    <IconKey>Application</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
+                                    <HideContextInfo>true</HideContextInfo>
+                                </Any>
+                            </Extension>
+                        </Data>
+                    </ReportNode>
+                    <ReportNode type="Step">
+                        <Data>
+                            <Name>
+                                <![CDATA[Device.closeViewer]]>
+                            </Name>
+                            <Description/>
+                            <StartTime>2021-02-19 17:16:35</StartTime>
+                            <Result>Passed</Result>
+                            <Links/>
+                            <Duration>
+                                <![CDATA[00:00:00.006]]>
+                            </Duration>
+                            <Extension>
+                                <Any>
+                                    <TestObject>
+                                        <Path>
+                                            <Object>
+                                                <Type>Mobile.Device</Type>
+                                                <Name>
+                                                    <![CDATA[Device]]>
+                                                </Name>
+                                            </Object>
+                                        </Path>
+                                        <Operation>closeViewer</Operation>
+                                        <OperationData/>
+                                        <Properties>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[id]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[9889d63758434f4b39]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[name]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[SM-G950F]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[model]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[SM-G950F]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[manufacturer]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[samsung]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[os type]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[ANDROID]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[os version]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[9]]>
+                                                </Value>
+                                            </Property>
+                                        </Properties>
+                                    </TestObject>
+                                    <IsHtmlErrorText>true</IsHtmlErrorText>
+                                    <IconKey>Device</IconKey>
+                                    <CustomUIElements>
+                                        <DescriptionLabel>Data</DescriptionLabel>
+                                    </CustomUIElements>
+                                    <Descriptive>
+                                        <TestObject>
+                                            <Path>
+                                                <Object>
+                                                    <Type>Mobile.Device</Type>
+                                                    <Name>
+                                                        <![CDATA[Device]]>
+                                                    </Name>
+                                                    <IconKey>Device</IconKey>
+                                                </Object>
+                                            </Path>
+                                        </TestObject>
+                                    </Descriptive>
                                     <HideContextInfo>true</HideContextInfo>
                                 </Any>
                             </Extension>
