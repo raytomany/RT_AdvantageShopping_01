@@ -62,7 +62,7 @@ load.action("Action", async function () {
     let webRequest9 = swaggerApi.getAllCategoriesAttributesUsingGET();
     const webResponse9 = await webRequest9.send();
 
-    t02.stop();
+    t01.stop();
 
 
     const webResponse10 = new load.WebRequest({
