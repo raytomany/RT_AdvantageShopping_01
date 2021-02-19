@@ -7,7 +7,7 @@ load.action("Action", async function () {
     load.WebRequest.defaults.headers = {
         "Accept-Encoding": "gzip"
     };
-
+//
     const webResponse1 = new load.WebRequest({
         id: 1,
         url: "http://www.advantageonlineshopping.com/services.properties",
