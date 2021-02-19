@@ -1,0 +1,622 @@
+[20:07:57.90] Debug: Running build Release_2021.0.0_1293 on darwin
+[20:07:57.92] Info: Starting initialize.
+[20:07:57.92] Info: Ending initialize.
+[20:07:57.92] Info: Starting iteration 1.
+[20:07:57.93] Info: WebRequest [Id: 1] 'http://www.advantageonlineshopping.com/services.properties' registered to send (sync).	(./main.js:29:8)
+[20:07:57.93] Trace: Request [Id: 1] 'http://www.advantageonlineshopping.com/services.properties': 
+GET /services.properties HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Dalvik/2.1.0 (Linux; U; Android 9; SM-G950F Build/PPR1.180610.011)
+Accept-Encoding: gzip
+Connection: Keep-Alive
+
+
+[20:07:57.93] Debug: Request [Id: 1]: GET 'http://www.advantageonlineshopping.com/services.properties' started.
+[20:07:57.94] Trace: Request [Id: 1]: Connecting tcp socket to host 107.23.171.213:80.
+[20:07:58.03] Trace: Request [Id: 1]: Connection to host 107.23.171.213:80 done.
+[20:07:58.03] Trace: Request [Id: 1]: New connection from 192.168.1.19:52825 to 107.23.171.213:80 in 93 ms.
+[20:07:58.13] Debug: Request [Id: 1]: GET 'http://www.advantageonlineshopping.com/services.properties' done. Status 200 . HTTP/1.1
+[20:07:58.13] Trace: Response 'http://www.advantageonlineshopping.com/services.properties': 
+HTTP/1.1 200 
+Content-Length: 1016
+Accept-Ranges: bytes
+Cache-Control: max-age=0
+Connection: keep-alive
+Date: Fri, 19 Feb 2021 20:07:58 GMT
+Etag: W/"1016-1613576362601"
+Expires: Fri, 19 Feb 2021 20:07:58 GMT
+Last-Modified: Wed, 17 Feb 2021 15:39:22 GMT
+Server: nginx/1.14.0 (Ubuntu)
+
+
+[20:07:58.13] Info: WebRequest [Id: 1] 'http://www.advantageonlineshopping.com/services.properties' completed. (1 request(s) sent, 1311 bytes downloaded)	(./main.js:29:8)
+[20:07:58.13] Info: Transaction 'Catalog' started.	(./main.js:32:9)
+[20:07:58.14] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data' registered to send (async).	(./main.js:35:44)
+[20:07:58.14] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data': 
+GET /catalog/api/v1/catalog/LastUpdate/Data HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:07:58.16] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data' started.
+[20:07:58.21] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52825 to 107.23.171.213:80.
+[20:07:58.38] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data' done. Status 200 . HTTP/1.1
+[20:07:58.38] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:07:58 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:07:58.43] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data' completed. (1 request(s) sent, 419 bytes downloaded)	(./main.js:35:44)
+[20:07:58.51] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL' registered to send (async).	(./main.js:39:44)
+[20:07:58.56] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL': 
+GET /catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:07:58.59] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL' started.
+[20:07:58.65] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52825 to 107.23.171.213:80.
+[20:07:58.83] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL' done. Status 200 . HTTP/1.1
+[20:07:58.83] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:07:58 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:07:58.88] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL' completed. (1 request(s) sent, 6800 bytes downloaded)	(./main.js:39:44)
+[20:07:58.92] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/1/products' registered to send (async).	(./main.js:43:44)
+[20:07:59.00] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/1/products': 
+GET /catalog/api/v1/categories/1/products HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:07:59.04] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/1/products' started.
+[20:07:59.11] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52825 to 107.23.171.213:80.
+[20:07:59.39] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/1/products' done. Status 200 . HTTP/1.1
+[20:07:59.39] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/1/products': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:07:59 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:07:59.39] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/1/products' completed. (1 request(s) sent, 3355 bytes downloaded)	(./main.js:43:44)
+[20:07:59.41] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/2/products' registered to send (async).	(./main.js:47:44)
+[20:07:59.41] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/2/products': 
+GET /catalog/api/v1/categories/2/products HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:07:59.48] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/2/products' started.
+[20:07:59.54] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52825 to 107.23.171.213:80.
+[20:07:59.86] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/2/products' done. Status 200 . HTTP/1.1
+[20:07:59.86] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/2/products': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:07:59 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:07:59.86] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/2/products' completed. (1 request(s) sent, 1720 bytes downloaded)	(./main.js:47:44)
+[20:07:59.87] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products' registered to send (async).	(./main.js:51:44)
+[20:07:59.87] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products': 
+GET /catalog/api/v1/categories/3/products HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:07:59.89] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products' started.
+[20:07:59.96] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52825 to 107.23.171.213:80.
+[20:08:00.28] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products' done. Status 200 . HTTP/1.1
+[20:08:00.28] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:08:00 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:08:00.28] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products' completed. (1 request(s) sent, 1809 bytes downloaded)	(./main.js:51:44)
+[20:08:00.29] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/4/products' registered to send (async).	(./main.js:55:44)
+[20:08:00.29] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/4/products': 
+GET /catalog/api/v1/categories/4/products HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:08:00.36] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/4/products' started.
+[20:08:00.43] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52825 to 107.23.171.213:80.
+[20:08:00.71] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/4/products' done. Status 200 . HTTP/1.1
+[20:08:00.71] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/4/products': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:08:00 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:08:00.71] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/4/products' completed. (1 request(s) sent, 2318 bytes downloaded)	(./main.js:55:44)
+[20:08:00.74] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/5/products' registered to send (async).	(./main.js:59:44)
+[20:08:00.79] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/5/products': 
+GET /catalog/api/v1/categories/5/products HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:08:00.87] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/5/products' started.
+[20:08:00.91] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52825 to 107.23.171.213:80.
+[20:08:01.30] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/5/products' done. Status 200 . HTTP/1.1
+[20:08:01.30] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/5/products': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:08:01 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:08:01.30] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/5/products' completed. (1 request(s) sent, 2727 bytes downloaded)	(./main.js:59:44)
+[20:08:01.30] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes' registered to send (async).	(./main.js:63:44)
+[20:08:01.32] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes': 
+GET /catalog/api/v1/categories/attributes HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:08:01.39] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes' started.
+[20:08:01.43] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52825 to 107.23.171.213:80.
+[20:08:01.74] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes' done. Status 200 . HTTP/1.1
+[20:08:01.74] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:08:01 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:08:01.74] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes' completed. (1 request(s) sent, 894 bytes downloaded)	(./main.js:63:44)
+[20:08:01.74] Info: Transaction 'Catalog' ended with a 'Passed' status (Duration: 3611 ms., ThinkTime: 0 ms.).	(./main.js:65:9)
+[20:08:01.75] Info: WebRequest [Id: 10] 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice/accountservice.wsdl' registered to send (sync).	(./main.js:85:8)
+[20:08:01.80] Trace: Request [Id: 10] 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice/accountservice.wsdl': 
+POST /accountservice/ws/accountservice/accountservice.wsdl HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: kSOAP/2.0
+Content-Length: 462
+Accept-Encoding: gzip
+Connection: close
+Content-Type: text/xml
+Soapaction: 
+
+<v:Envelope xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns:d="http://www.w3.org/2001/XMLSchema" xmlns:c="http://schemas.xmlsoap.org/soap/encoding/" xmlns:v="http://schemas.xmlsoap.org/soap/envelope/">
+            <v:Header></v:Header>
+            <v:Body>
+                <GetAccountConfigurationRequest xmlns="com.advantage.online.store.accountservice" id="o0" c:root="1"></GetAccountConfigurationRequest>
+            </v:Body>
+        </v:Envelope>
+
+[20:08:01.85] Debug: Request [Id: 10]: POST 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice/accountservice.wsdl' started.
+[20:08:01.94] Trace: Request [Id: 10]: Connection reused from 192.168.1.19:52825 to 107.23.171.213:80.
+[20:08:02.13] Debug: Request [Id: 10]: POST 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice/accountservice.wsdl' done. Status 200 . HTTP/1.1
+[20:08:02.13] Trace: Response 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice/accountservice.wsdl': 
+HTTP/1.1 200 
+Connection: close
+Content-Length: 823
+Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Key, soapaction
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Request-Method: POST, GET, OPTIONS, DELETE
+Cache-Control: no-store
+Content-Type: text/xml;charset=utf-8
+Date: Fri, 19 Feb 2021 20:08:02 GMT
+Expires: 0
+Pragma: no-cache
+Server: nginx/1.14.0 (Ubuntu)
+Soapaction: ""
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:08:02.19] Info: WebRequest [Id: 10] 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice/accountservice.wsdl' completed. (1 request(s) sent, 1492 bytes downloaded)	(./main.js:85:8)
+[20:08:02.35] Info: Ending iteration 1.
+[20:08:02.44] Info: Waiting 5 seconds for iteration pacing.
+[20:08:07.50] Info: Starting iteration 2.
+[20:08:07.50] Info: WebRequest [Id: 1] 'http://www.advantageonlineshopping.com/services.properties' registered to send (sync).	(./main.js:29:8)
+[20:08:07.50] Trace: Request [Id: 1] 'http://www.advantageonlineshopping.com/services.properties': 
+GET /services.properties HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Dalvik/2.1.0 (Linux; U; Android 9; SM-G950F Build/PPR1.180610.011)
+Accept-Encoding: gzip
+Connection: Keep-Alive
+
+
+[20:08:07.50] Debug: Request [Id: 1]: GET 'http://www.advantageonlineshopping.com/services.properties' started.
+[20:08:07.50] Trace: Request [Id: 1]: Connecting tcp socket to host 107.23.171.213:80.
+[20:08:07.60] Trace: Request [Id: 1]: Connection to host 107.23.171.213:80 done.
+[20:08:07.60] Trace: Request [Id: 1]: New connection from 192.168.1.19:52854 to 107.23.171.213:80 in 97 ms.
+[20:08:07.69] Debug: Request [Id: 1]: GET 'http://www.advantageonlineshopping.com/services.properties' done. Status 200 . HTTP/1.1
+[20:08:07.69] Trace: Response 'http://www.advantageonlineshopping.com/services.properties': 
+HTTP/1.1 200 
+Content-Length: 1016
+Accept-Ranges: bytes
+Cache-Control: max-age=0
+Connection: keep-alive
+Date: Fri, 19 Feb 2021 20:08:07 GMT
+Etag: W/"1016-1613576362601"
+Expires: Fri, 19 Feb 2021 20:08:07 GMT
+Last-Modified: Wed, 17 Feb 2021 15:39:22 GMT
+Server: nginx/1.14.0 (Ubuntu)
+
+
+[20:08:07.70] Info: WebRequest [Id: 1] 'http://www.advantageonlineshopping.com/services.properties' completed. (1 request(s) sent, 1311 bytes downloaded)	(./main.js:29:8)
+[20:08:07.70] Info: Transaction 'Catalog' started.	(./main.js:32:9)
+[20:08:07.71] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data' registered to send (async).	(./main.js:35:44)
+[20:08:07.71] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data': 
+GET /catalog/api/v1/catalog/LastUpdate/Data HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:08:07.71] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data' started.
+[20:08:07.71] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52854 to 107.23.171.213:80.
+[20:08:07.89] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data' done. Status 200 . HTTP/1.1
+[20:08:07.89] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:08:07 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:08:07.89] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data' completed. (1 request(s) sent, 419 bytes downloaded)	(./main.js:35:44)
+[20:08:07.95] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL' registered to send (async).	(./main.js:39:44)
+[20:08:07.99] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL': 
+GET /catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:08:08.07] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL' started.
+[20:08:08.13] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52854 to 107.23.171.213:80.
+[20:08:08.28] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL' done. Status 200 . HTTP/1.1
+[20:08:08.28] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:08:08 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:08:08.30] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL' completed. (1 request(s) sent, 6800 bytes downloaded)	(./main.js:39:44)
+[20:08:08.35] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/1/products' registered to send (async).	(./main.js:43:44)
+[20:08:08.40] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/1/products': 
+GET /catalog/api/v1/categories/1/products HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:08:08.46] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/1/products' started.
+[20:08:08.51] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52854 to 107.23.171.213:80.
+[20:08:08.85] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/1/products' done. Status 200 . HTTP/1.1
+[20:08:08.85] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/1/products': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:08:08 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:08:08.85] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/1/products' completed. (1 request(s) sent, 3354 bytes downloaded)	(./main.js:43:44)
+[20:08:08.87] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/2/products' registered to send (async).	(./main.js:47:44)
+[20:08:08.87] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/2/products': 
+GET /catalog/api/v1/categories/2/products HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:08:08.92] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/2/products' started.
+[20:08:08.98] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52854 to 107.23.171.213:80.
+[20:08:09.31] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/2/products' done. Status 200 . HTTP/1.1
+[20:08:09.31] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/2/products': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:08:09 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:08:09.31] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/2/products' completed. (1 request(s) sent, 1722 bytes downloaded)	(./main.js:47:44)
+[20:08:09.31] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products' registered to send (async).	(./main.js:51:44)
+[20:08:09.38] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products': 
+GET /catalog/api/v1/categories/3/products HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:08:09.47] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products' started.
+[20:08:09.53] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52854 to 107.23.171.213:80.
+[20:08:09.90] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products' done. Status 200 . HTTP/1.1
+[20:08:09.90] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:08:09 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:08:09.90] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products' completed. (1 request(s) sent, 1805 bytes downloaded)	(./main.js:51:44)
+[20:08:09.95] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/4/products' registered to send (async).	(./main.js:55:44)
+[20:08:10.01] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/4/products': 
+GET /catalog/api/v1/categories/4/products HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:08:10.06] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/4/products' started.
+[20:08:10.14] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52854 to 107.23.171.213:80.
+[20:08:10.50] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/4/products' done. Status 200 . HTTP/1.1
+[20:08:10.50] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/4/products': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:08:10 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:08:10.50] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/4/products' completed. (1 request(s) sent, 2330 bytes downloaded)	(./main.js:55:44)
+[20:08:10.51] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/5/products' registered to send (async).	(./main.js:59:44)
+[20:08:10.53] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/5/products': 
+GET /catalog/api/v1/categories/5/products HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:08:10.58] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/5/products' started.
+[20:08:10.66] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52854 to 107.23.171.213:80.
+[20:08:11.01] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/5/products' done. Status 200 . HTTP/1.1
+[20:08:11.01] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/5/products': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:08:11 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:08:11.01] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/5/products' completed. (1 request(s) sent, 2722 bytes downloaded)	(./main.js:59:44)
+[20:08:11.01] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes' registered to send (async).	(./main.js:63:44)
+[20:08:11.05] Trace: Request [Id: 0] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes': 
+GET /catalog/api/v1/categories/attributes HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: Go-http-client/1.1
+Accept: */*
+Accept-Encoding: gzip
+
+
+[20:08:11.09] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes' started.
+[20:08:11.13] Trace: Request [Id: 0]: Connection reused from 192.168.1.19:52854 to 107.23.171.213:80.
+[20:08:11.45] Debug: Request [Id: 0]: GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes' done. Status 200 . HTTP/1.1
+[20:08:11.45] Trace: Response 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes': 
+HTTP/1.1 200 
+Transfer-Encoding: chunked
+Cache-Control: no-store
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Fri, 19 Feb 2021 20:08:11 GMT
+Expires: 0
+Server: nginx/1.14.0 (Ubuntu)
+Vary: accept-encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:08:11.45] Info: WebRequest [Id: ] 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes' completed. (1 request(s) sent, 894 bytes downloaded)	(./main.js:63:44)
+[20:08:11.47] Info: Transaction 'Catalog' ended with a 'Passed' status (Duration: 3764 ms., ThinkTime: 0 ms.).	(./main.js:65:9)
+[20:08:11.50] Info: WebRequest [Id: 10] 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice/accountservice.wsdl' registered to send (sync).	(./main.js:85:8)
+[20:08:11.56] Trace: Request [Id: 10] 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice/accountservice.wsdl': 
+POST /accountservice/ws/accountservice/accountservice.wsdl HTTP/1.1
+Host: www.advantageonlineshopping.com
+User-Agent: kSOAP/2.0
+Content-Length: 462
+Accept-Encoding: gzip
+Connection: close
+Content-Type: text/xml
+Soapaction: 
+
+<v:Envelope xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns:d="http://www.w3.org/2001/XMLSchema" xmlns:c="http://schemas.xmlsoap.org/soap/encoding/" xmlns:v="http://schemas.xmlsoap.org/soap/envelope/">
+            <v:Header></v:Header>
+            <v:Body>
+                <GetAccountConfigurationRequest xmlns="com.advantage.online.store.accountservice" id="o0" c:root="1"></GetAccountConfigurationRequest>
+            </v:Body>
+        </v:Envelope>
+
+[20:08:11.63] Debug: Request [Id: 10]: POST 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice/accountservice.wsdl' started.
+[20:08:11.67] Trace: Request [Id: 10]: Connection reused from 192.168.1.19:52854 to 107.23.171.213:80.
+[20:08:11.85] Debug: Request [Id: 10]: POST 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice/accountservice.wsdl' done. Status 200 . HTTP/1.1
+[20:08:11.85] Trace: Response 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice/accountservice.wsdl': 
+HTTP/1.1 200 
+Connection: close
+Content-Length: 823
+Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Key, soapaction
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Request-Method: POST, GET, OPTIONS, DELETE
+Cache-Control: no-store
+Content-Type: text/xml;charset=utf-8
+Date: Fri, 19 Feb 2021 20:08:11 GMT
+Expires: 0
+Pragma: no-cache
+Server: nginx/1.14.0 (Ubuntu)
+Soapaction: ""
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+
+
+[20:08:11.93] Info: WebRequest [Id: 10] 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice/accountservice.wsdl' completed. (1 request(s) sent, 1492 bytes downloaded)	(./main.js:85:8)
+[20:08:11.99] Info: Ending iteration 2.
+[20:08:12.24] Info: Starting finalize.
+[20:08:12.24] Info: Ending finalize.

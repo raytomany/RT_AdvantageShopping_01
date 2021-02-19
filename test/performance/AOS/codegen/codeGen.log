@@ -1,0 +1,35 @@
+[20:06:09.95] Info: Running build Release_2021.0.0_1293 on darwin
+[20:06:09.95] Info: DevWeb offline generator started with 'swagger' mode, 'pages' level.
+[20:06:09.95] Info: Generating script from '/Users/Store/Downloads/LRDeveloper/AOSDevWebAssets/swagger.json'.
+[20:06:09.95] Info: Using configuration file: /Users/Store/Downloads/LRDeveloper/devweb/generator_config.yml.
+[20:06:10.05] Warning: Swagger JSON is missing 'Scheme' property. Default scheme [http] was selected.
+[20:06:10.08] Info: HAR file loaded, started parsing phase.
+[20:06:10.08] Info: Configured none resources list: [text/html text/xml text/plain application/json]
+[20:06:10.08] Info: Parsing done, loaded 10 steps from HAR.
+[20:06:10.08] Info: Configured headers to filter: [Host Content-Length Cookie]
+[20:06:10.08] Info: Configured hosts black list: [.*google.* .*bing.* .*geolocation.* .*gstatic.* .*firefox.*]
+[20:06:10.08] Info: Configured extensions to filter: [.ico]
+[20:06:10.08] Info: **********************************************
+[20:06:10.08] Info: WebRequest [Id: 1] GET 'http://www.advantageonlineshopping.com/services.properties'
+[20:06:10.09] Info: **********************************************
+[20:06:10.09] Info: WebRequest [Id: 2] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/catalog/LastUpdate/Data'
+[20:06:10.09] Info: **********************************************
+[20:06:10.09] Info: WebRequest [Id: 3] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL'
+[20:06:10.09] Info: **********************************************
+[20:06:10.09] Info: WebRequest [Id: 4] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/1/products'
+[20:06:10.11] Info: **********************************************
+[20:06:10.13] Info: WebRequest [Id: 5] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/2/products'
+[20:06:10.15] Info: **********************************************
+[20:06:10.16] Info: WebRequest [Id: 6] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/3/products'
+[20:06:10.19] Info: **********************************************
+[20:06:10.19] Info: WebRequest [Id: 7] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/4/products'
+[20:06:10.22] Info: **********************************************
+[20:06:10.23] Info: WebRequest [Id: 8] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/5/products'
+[20:06:10.26] Info: **********************************************
+[20:06:10.27] Info: WebRequest [Id: 9] GET 'http://www.advantageonlineshopping.com/catalog/api/v1/categories/attributes'
+[20:06:10.30] Info: **********************************************
+[20:06:10.31] Info: WebRequest [Id: 10] POST 'http://www.advantageonlineshopping.com/accountservice/ws/accountservice/accountservice.wsdl'
+[20:06:10.33] Info: Created 10 steps.
+[20:06:10.43] Info: DevWeb script generated in folder '/Users/Store/Downloads/RT_AdvantageShopping_01/test/performance/AOS'.
+[20:06:10.43] Info: Save input file as /Users/Store/Downloads/RT_AdvantageShopping_01/test/performance/AOS/codegen/codegen.json
+[20:06:10.43] Info: Save input file as /Users/Store/Downloads/RT_AdvantageShopping_01/test/performance/AOS/codegen/codegen.har

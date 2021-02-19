@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="AOS" tests="2">
+        <testcase name="Transaction Response Time: Catalog - average of 3541 ms, compared to the defined amount of 5000 ms" time="3.541" systemOut="SLA &#34;Transaction Response Time&#34; passed.&#xA;The transaction name: Catalog, has an average of 3541 ms, compared to the defined amount of 5000 ms."></testcase>
+        <testcase name="Percentage of Failed Transactions - 0% compared to the defined amount of 3%" systemOut="SLA &#34;Percentage of Failed Transactions&#34; passed.&#xA;The failing transactions ratio is 0%, compared to the defined amount of 3%."></testcase>
+    </testsuite>
+</testsuites>
