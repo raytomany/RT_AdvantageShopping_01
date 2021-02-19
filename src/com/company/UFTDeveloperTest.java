@@ -43,7 +43,7 @@ public class UFTDeveloperTest extends UnitTestClassBase {
     public void test() throws GeneralLeanFtException {
 
         // Mobile tests usually start by locking a device from UFT Mobile. In this step, we'll lock a device by its ID
-        Device device = MobileLab.lockDeviceById("9889d63758434f4b39"); // ce08171898ee74520c7e
+        Device device = MobileLab.lockDeviceById("9889d63758434f4b39"); // ce08171898ee74520c7e /
 
         device.openViewer();
 
