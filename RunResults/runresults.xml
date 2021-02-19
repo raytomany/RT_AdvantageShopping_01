@@ -1,7 +1,7 @@
 <Results>
     <GeneralInfo>
         <Name/>
-        <RunStartTime>2021-02-19 19:25:18</RunStartTime>
+        <RunStartTime>2021-02-19 19:39:01</RunStartTime>
         <Timezone>GMT+0000 (Greenwich Mean Time)</Timezone>
         <OrchestrationToolName>JUnit</OrchestrationToolName>
         <OrchestrationToolVersion/>
@@ -14,11 +14,11 @@
             <Description>
                 <![CDATA[ ]]>
             </Description>
-            <StartTime>2021-02-19 19:25:18</StartTime>
+            <StartTime>2021-02-19 19:39:01</StartTime>
             <Result>Passed</Result>
             <Links/>
             <Duration>
-                <![CDATA[00:02:20.590]]>
+                <![CDATA[00:02:19.678]]>
             </Duration>
             <Extension>
                 <Any>
@@ -58,11 +58,11 @@
                 <Description>
                     <![CDATA[Version: N/A]]>
                 </Description>
-                <StartTime>2021-02-19 19:25:18</StartTime>
+                <StartTime>2021-02-19 19:39:01</StartTime>
                 <Result>Passed</Result>
                 <Links/>
                 <Duration>
-                    <![CDATA[00:02:20.506]]>
+                    <![CDATA[00:02:19.507]]>
                 </Duration>
                 <Extension>
                     <Any>
@@ -77,11 +77,11 @@
                         <![CDATA[com.company.UFTDeveloperTest]]>
                     </Name>
                     <Description/>
-                    <StartTime>2021-02-19 19:25:18</StartTime>
+                    <StartTime>2021-02-19 19:39:01</StartTime>
                     <Result>Passed</Result>
                     <Links/>
                     <Duration>
-                        <![CDATA[00:02:20.506]]>
+                        <![CDATA[00:02:19.506]]>
                     </Duration>
                     <Extension>
                         <Any>
@@ -94,11 +94,11 @@
                     <Data>
                         <Name>test</Name>
                         <Description/>
-                        <StartTime>2021-02-19 19:25:18</StartTime>
+                        <StartTime>2021-02-19 19:39:01</StartTime>
                         <Result>Passed</Result>
                         <Links/>
                         <Duration>
-                            <![CDATA[00:02:20.502]]>
+                            <![CDATA[00:02:19.499]]>
                         </Duration>
                         <Extension>
                             <Any>
@@ -115,7 +115,7 @@
                             <Description>
                                 <![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>9889d63758434f4b39</td></tr></table><style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><p><div class=data-label><hr><b>Device Information</b></div> </p><style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>id</td><td class='ex-value'>9889d63758434f4b39</td></tr><tr><td class='ex-name'>name</td><td class='ex-value'>SM-G950F</td></tr><tr><td class='ex-name'>model</td><td class='ex-value'>SM-G950F</td></tr><tr><td class='ex-name'>manufacturer</td><td class='ex-value'>samsung</td></tr><tr><td class='ex-name'>os type</td><td class='ex-value'>ANDROID</td></tr><tr><td class='ex-name'>os version</td><td class='ex-value'>9</td></tr></table>]]>
                             </Description>
-                            <StartTime>2021-02-19 19:25:18</StartTime>
+                            <StartTime>2021-02-19 19:39:01</StartTime>
                             <Result>Passed</Result>
                             <Links/>
                             <Duration>
@@ -153,11 +153,11 @@
                                 <![CDATA[Device.openViewer]]>
                             </Name>
                             <Description/>
-                            <StartTime>2021-02-19 19:25:26</StartTime>
+                            <StartTime>2021-02-19 19:39:09</StartTime>
                             <Result>Passed</Result>
                             <Links/>
                             <Duration>
-                                <![CDATA[00:00:07.465]]>
+                                <![CDATA[00:00:09.178]]>
                             </Duration>
                             <Extension>
                                 <Any>
@@ -252,15 +252,15 @@
                                 <![CDATA[Advantage Shopping.launch]]>
                             </Name>
                             <Description/>
-                            <StartTime>2021-02-19 19:25:33</StartTime>
+                            <StartTime>2021-02-19 19:39:18</StartTime>
                             <Result>Passed</Result>
                             <Links/>
                             <Duration>
-                                <![CDATA[00:00:10.081]]>
+                                <![CDATA[00:00:10.609]]>
                             </Duration>
-                            <Snapshot reference="Resources/Snapshots/65a69e81-103c-4775-afdf-8359ee146455.png">
+                            <Snapshot reference="Resources/Snapshots/6a83636c-a166-4683-8a2b-e138cd3a9a5a.png">
                                 <reference>
-                                    <![CDATA[Resources/Snapshots/65a69e81-103c-4775-afdf-8359ee146455.png]]>
+                                    <![CDATA[Resources/Snapshots/6a83636c-a166-4683-8a2b-e138cd3a9a5a.png]]>
                                 </reference>
                             </Snapshot>
                             <Extension>
@@ -337,15 +337,15 @@
                                 <![CDATA[imageViewSearch.tap]]>
                             </Name>
                             <Description/>
-                            <StartTime>2021-02-19 19:25:44</StartTime>
+                            <StartTime>2021-02-19 19:39:29</StartTime>
                             <Result>Passed</Result>
                             <Links/>
                             <Duration>
-                                <![CDATA[00:00:14.483]]>
+                                <![CDATA[00:00:13.995]]>
                             </Duration>
-                            <Snapshot reference="Resources/Snapshots/32123cd1-d2df-4fd4-998a-95c2a567da6e.png">
+                            <Snapshot reference="Resources/Snapshots/2883f603-6a0b-4a63-8ee0-86bddb8d8c19.png">
                                 <reference>
-                                    <![CDATA[Resources/Snapshots/32123cd1-d2df-4fd4-998a-95c2a567da6e.png]]>
+                                    <![CDATA[Resources/Snapshots/2883f603-6a0b-4a63-8ee0-86bddb8d8c19.png]]>
                                 </reference>
                             </Snapshot>
                             <Extension>
@@ -453,15 +453,15 @@
                             <Description>
                                 <![CDATA[<style>.ex-table{border-collapse: collapse !important;width: auto;height: auto;}.ex-table,.ex-table tr,.ex-table td{border: 1px solid #c6c6c6;}.ex-table td{padding: 5px 10px;vertical-align: top;width: auto;}.ex-table .ex-name{font-size: 13px;font-weight: bold;background-color: #f3f3f3;white-space: nowrap;}.ex-table .ex-value{color: #5a5a5a;}</style><table class='ex-table'><tr><td class='ex-name'>arg0</td><td class='ex-value'>17t</td></tr></table>]]>
                             </Description>
-                            <StartTime>2021-02-19 19:25:58</StartTime>
+                            <StartTime>2021-02-19 19:39:43</StartTime>
                             <Result>Passed</Result>
                             <Links/>
                             <Duration>
-                                <![CDATA[00:00:03.287]]>
+                                <![CDATA[00:00:03.109]]>
                             </Duration>
-                            <Snapshot reference="Resources/Snapshots/3de2666d-4779-40a5-86dd-a09310e29496.png">
+                            <Snapshot reference="Resources/Snapshots/969dfd83-1998-4d6b-aaed-e8ba9a73cf6e.png">
                                 <reference>
-                                    <![CDATA[Resources/Snapshots/3de2666d-4779-40a5-86dd-a09310e29496.png]]>
+                                    <![CDATA[Resources/Snapshots/969dfd83-1998-4d6b-aaed-e8ba9a73cf6e.png]]>
                                 </reference>
                             </Snapshot>
                             <Extension>
@@ -559,15 +559,15 @@
                                 <![CDATA[imageViewSearch.tap]]>
                             </Name>
                             <Description/>
-                            <StartTime>2021-02-19 19:26:02</StartTime>
+                            <StartTime>2021-02-19 19:39:47</StartTime>
                             <Result>Passed</Result>
                             <Links/>
                             <Duration>
-                                <![CDATA[00:00:13.920]]>
+                                <![CDATA[00:00:13.755]]>
                             </Duration>
-                            <Snapshot reference="Resources/Snapshots/b081281f-b907-46ad-a0a0-476780b47cf3.png">
+                            <Snapshot reference="Resources/Snapshots/28da11e5-ed81-4932-a3e1-d787e3844fff.png">
                                 <reference>
-                                    <![CDATA[Resources/Snapshots/b081281f-b907-46ad-a0a0-476780b47cf3.png]]>
+                                    <![CDATA[Resources/Snapshots/28da11e5-ed81-4932-a3e1-d787e3844fff.png]]>
                                 </reference>
                             </Snapshot>
                             <Extension>
@@ -673,15 +673,15 @@
                                 <![CDATA[HP ENVY - 17T TOUCH LAPTOP.tap]]>
                             </Name>
                             <Description/>
-                            <StartTime>2021-02-19 19:26:16</StartTime>
+                            <StartTime>2021-02-19 19:40:00</StartTime>
                             <Result>Passed</Result>
                             <Links/>
                             <Duration>
-                                <![CDATA[00:00:11.575]]>
+                                <![CDATA[00:00:12.161]]>
                             </Duration>
-                            <Snapshot reference="Resources/Snapshots/35034c68-3da3-46e1-88f8-e2489d327aab.png">
+                            <Snapshot reference="Resources/Snapshots/6e221365-d830-4113-9c9e-61773fd62049.png">
                                 <reference>
-                                    <![CDATA[Resources/Snapshots/35034c68-3da3-46e1-88f8-e2489d327aab.png]]>
+                                    <![CDATA[Resources/Snapshots/6e221365-d830-4113-9c9e-61773fd62049.png]]>
                                 </reference>
                             </Snapshot>
                             <Extension>
@@ -720,14 +720,6 @@
                                             </Property>
                                             <Property>
                                                 <Name>
-                                                    <![CDATA[text]]>
-                                                </Name>
-                                                <Value>
-                                                    <![CDATA[HP ENVY - 17T TOUCH LAPTOP]]>
-                                                </Value>
-                                            </Property>
-                                            <Property>
-                                                <Name>
                                                     <![CDATA[resourceId]]>
                                                 </Name>
                                                 <Value>
@@ -740,6 +732,14 @@
                                                 </Name>
                                                 <Value>
                                                     <![CDATA[2]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[text]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[HP ENVY - 17T TOUCH LAPTOP]]>
                                                 </Value>
                                             </Property>
                                             <Property>
@@ -795,15 +795,15 @@
                                 <![CDATA[ADD TO CART.tap]]>
                             </Name>
                             <Description/>
-                            <StartTime>2021-02-19 19:26:27</StartTime>
+                            <StartTime>2021-02-19 19:40:13</StartTime>
                             <Result>Passed</Result>
                             <Links/>
                             <Duration>
-                                <![CDATA[00:00:13.299]]>
+                                <![CDATA[00:00:13.620]]>
                             </Duration>
-                            <Snapshot reference="Resources/Snapshots/a9cf0fb8-1d22-4791-91fc-ef6776206375.png">
+                            <Snapshot reference="Resources/Snapshots/23c67b7f-2882-405c-8f3d-769bddde6a03.png">
                                 <reference>
-                                    <![CDATA[Resources/Snapshots/a9cf0fb8-1d22-4791-91fc-ef6776206375.png]]>
+                                    <![CDATA[Resources/Snapshots/23c67b7f-2882-405c-8f3d-769bddde6a03.png]]>
                                 </reference>
                             </Snapshot>
                             <Extension>
@@ -842,14 +842,6 @@
                                             </Property>
                                             <Property>
                                                 <Name>
-                                                    <![CDATA[text]]>
-                                                </Name>
-                                                <Value>
-                                                    <![CDATA[ADD TO CART]]>
-                                                </Value>
-                                            </Property>
-                                            <Property>
-                                                <Name>
                                                     <![CDATA[resourceId]]>
                                                 </Name>
                                                 <Value>
@@ -862,6 +854,14 @@
                                                 </Name>
                                                 <Value>
                                                     <![CDATA[0]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[text]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[ADD TO CART]]>
                                                 </Value>
                                             </Property>
                                             <Property>
@@ -917,15 +917,15 @@
                                 <![CDATA[imageViewBack.tap]]>
                             </Name>
                             <Description/>
-                            <StartTime>2021-02-19 19:26:41</StartTime>
+                            <StartTime>2021-02-19 19:40:26</StartTime>
                             <Result>Passed</Result>
                             <Links/>
                             <Duration>
-                                <![CDATA[00:00:13.074]]>
+                                <![CDATA[00:00:11.751]]>
                             </Duration>
-                            <Snapshot reference="Resources/Snapshots/029aaeb2-ae25-4619-8d51-edac88a7f72f.png">
+                            <Snapshot reference="Resources/Snapshots/98255a9b-81df-42e9-a99e-0a0b64f6ffa1.png">
                                 <reference>
-                                    <![CDATA[Resources/Snapshots/029aaeb2-ae25-4619-8d51-edac88a7f72f.png]]>
+                                    <![CDATA[Resources/Snapshots/98255a9b-81df-42e9-a99e-0a0b64f6ffa1.png]]>
                                 </reference>
                             </Snapshot>
                             <Extension>
@@ -1031,15 +1031,15 @@
                                 <![CDATA[imageViewBack.tap]]>
                             </Name>
                             <Description/>
-                            <StartTime>2021-02-19 19:26:54</StartTime>
+                            <StartTime>2021-02-19 19:40:38</StartTime>
                             <Result>Passed</Result>
                             <Links/>
                             <Duration>
-                                <![CDATA[00:00:14.011]]>
+                                <![CDATA[00:00:14.573]]>
                             </Duration>
-                            <Snapshot reference="Resources/Snapshots/adfc950a-a9fe-40e2-a609-aa878186090a.png">
+                            <Snapshot reference="Resources/Snapshots/c6c85965-98f2-40ac-8f3a-4585d17735e6.png">
                                 <reference>
-                                    <![CDATA[Resources/Snapshots/adfc950a-a9fe-40e2-a609-aa878186090a.png]]>
+                                    <![CDATA[Resources/Snapshots/c6c85965-98f2-40ac-8f3a-4585d17735e6.png]]>
                                 </reference>
                             </Snapshot>
                             <Extension>
@@ -1145,15 +1145,15 @@
                                 <![CDATA[imageViewMenu.tap]]>
                             </Name>
                             <Description/>
-                            <StartTime>2021-02-19 19:27:08</StartTime>
+                            <StartTime>2021-02-19 19:40:53</StartTime>
                             <Result>Passed</Result>
                             <Links/>
                             <Duration>
-                                <![CDATA[00:00:12.044]]>
+                                <![CDATA[00:00:11.770]]>
                             </Duration>
-                            <Snapshot reference="Resources/Snapshots/7d17788b-4c2b-45af-aebf-0d1e60dad8a5.png">
+                            <Snapshot reference="Resources/Snapshots/fbffb1af-5e55-4ce0-8bde-f99b357010eb.png">
                                 <reference>
-                                    <![CDATA[Resources/Snapshots/7d17788b-4c2b-45af-aebf-0d1e60dad8a5.png]]>
+                                    <![CDATA[Resources/Snapshots/fbffb1af-5e55-4ce0-8bde-f99b357010eb.png]]>
                                 </reference>
                             </Snapshot>
                             <Extension>
@@ -1259,15 +1259,15 @@
                                 <![CDATA[HOME.tap]]>
                             </Name>
                             <Description/>
-                            <StartTime>2021-02-19 19:27:20</StartTime>
+                            <StartTime>2021-02-19 19:41:05</StartTime>
                             <Result>Passed</Result>
                             <Links/>
                             <Duration>
-                                <![CDATA[00:00:16.804]]>
+                                <![CDATA[00:00:14.617]]>
                             </Duration>
-                            <Snapshot reference="Resources/Snapshots/d3a28513-0a26-444f-9e84-14551848ef32.png">
+                            <Snapshot reference="Resources/Snapshots/5d38a29c-ae94-4682-af88-94b41d845af2.png">
                                 <reference>
-                                    <![CDATA[Resources/Snapshots/d3a28513-0a26-444f-9e84-14551848ef32.png]]>
+                                    <![CDATA[Resources/Snapshots/5d38a29c-ae94-4682-af88-94b41d845af2.png]]>
                                 </reference>
                             </Snapshot>
                             <Extension>
@@ -1306,14 +1306,6 @@
                                             </Property>
                                             <Property>
                                                 <Name>
-                                                    <![CDATA[text]]>
-                                                </Name>
-                                                <Value>
-                                                    <![CDATA[HOME]]>
-                                                </Value>
-                                            </Property>
-                                            <Property>
-                                                <Name>
                                                     <![CDATA[resourceId]]>
                                                 </Name>
                                                 <Value>
@@ -1326,6 +1318,14 @@
                                                 </Name>
                                                 <Value>
                                                     <![CDATA[6]]>
+                                                </Value>
+                                            </Property>
+                                            <Property>
+                                                <Name>
+                                                    <![CDATA[text]]>
+                                                </Name>
+                                                <Value>
+                                                    <![CDATA[HOME]]>
                                                 </Value>
                                             </Property>
                                             <Property>
@@ -1381,11 +1381,11 @@
                                 <![CDATA[[Application].kill]]>
                             </Name>
                             <Description/>
-                            <StartTime>2021-02-19 19:27:37</StartTime>
+                            <StartTime>2021-02-19 19:41:19</StartTime>
                             <Result>Passed</Result>
                             <Links/>
                             <Duration>
-                                <![CDATA[00:00:01.551]]>
+                                <![CDATA[00:00:01.594]]>
                             </Duration>
                             <Extension>
                                 <Any>
@@ -1461,11 +1461,11 @@
                                 <![CDATA[Device.closeViewer]]>
                             </Name>
                             <Description/>
-                            <StartTime>2021-02-19 19:27:38</StartTime>
+                            <StartTime>2021-02-19 19:41:21</StartTime>
                             <Result>Passed</Result>
                             <Links/>
                             <Duration>
-                                <![CDATA[00:00:00.007]]>
+                                <![CDATA[00:00:00.008]]>
                             </Duration>
                             <Extension>
                                 <Any>
