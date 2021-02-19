@@ -1,7 +1,7 @@
 // This script was generated and reflects raw data. It is recommended to change this code to your required logic
 load.initialize("Initialize", async function () {
 });
-
+//
 load.action("Action", async function () {
     load.WebRequest.defaults.returnBody = false;
     load.WebRequest.defaults.headers = {
